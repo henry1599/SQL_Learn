@@ -1,0 +1,335 @@
+0
+1
+00:00:00,650 --> 00:00:01,180
+.
+1
+
+2
+00:00:01,220 --> 00:00:02,120
+All right!
+2
+
+3
+00:00:02,120 --> 00:00:03,120
+Great!
+3
+
+4
+00:00:03,140 --> 00:00:08,990
+One thing you'll notice when studying programming languages is that the concepts you encounter are interrelated.
+4
+
+5
+00:00:08,990 --> 00:00:14,600
+This means focusing on a single topic can hardly deliver the content that must be explained in its entirety.
+5
+
+6
+00:00:15,110 --> 00:00:18,300
+To this story, SQL makes no exception.
+6
+
+7
+00:00:18,380 --> 00:00:22,150
+Despite that, we must start from somewhere, right?
+7
+
+8
+00:00:22,190 --> 00:00:26,960
+My working experience tells me you will be much faster in learning and writing efficient queries if
+8
+
+9
+00:00:26,960 --> 00:00:29,900
+you go through a brief introduction to databases.
+9
+
+10
+00:00:29,900 --> 00:00:31,640
+It is the best thing to begin with,
+10
+
+11
+00:00:31,760 --> 00:00:34,320
+so here's what I would like to share with you.
+11
+
+12
+00:00:34,550 --> 00:00:40,430
+The table you see here contains data about the customer cells of a furniture store. And, this is how we
+12
+
+13
+00:00:40,430 --> 00:00:42,140
+should read this information:
+13
+
+14
+00:00:42,410 --> 00:00:46,840
+Purchase number one was registered on the 3rd of September 2016.
+14
+
+15
+00:00:46,910 --> 00:00:54,490
+Then customer number one bought the item with code A1. Each of the four elements has a specific meaning.
+15
+
+16
+00:00:55,120 --> 00:00:57,620
+We will call each one a data value.
+16
+
+17
+00:00:58,810 --> 00:01:04,200
+All four data values make up one record. A record is each entry that exists in a table.
+17
+
+18
+00:01:04,360 --> 00:01:06,810
+It corresponds to a row of the table.
+18
+
+19
+00:01:07,210 --> 00:01:13,330
+Therefore, these four data values form one record, and these data values regarding purchase number two
+19
+
+20
+00:01:13,390 --> 00:01:15,060
+form another record.
+20
+
+21
+00:01:15,100 --> 00:01:18,730
+You could use the terms row and record interchangeably.
+21
+
+22
+00:01:18,730 --> 00:01:23,540
+Besides the rows, you can see the data is separated into four columns or fields.
+22
+
+23
+00:01:23,860 --> 00:01:29,430
+A field is a column in a table containing specific information about every record in the table.
+23
+
+24
+00:01:29,890 --> 00:01:35,770
+This means all the records in a table, regardless if they are 10, 10000, or 10 million, will have a certain
+24
+
+25
+00:01:35,770 --> 00:01:38,210
+purchase, number date of purchase,
+25
+
+26
+00:01:38,230 --> 00:01:44,390
+customer ID, and item information. 
+When the data you have is organized in rows and columns,
+26
+
+27
+00:01:44,390 --> 00:01:50,060
+this means you are dealing with stored tabular data. That is important to mention because you will often
+27
+
+28
+00:01:50,060 --> 00:01:56,680
+see in the literature that database management relates to data stored in tabular form. Great!
+28
+
+29
+00:01:56,680 --> 00:01:59,870
+Here comes the more interesting part. In this table,
+29
+
+30
+00:01:59,890 --> 00:02:03,040
+we know nothing about a customer besides her ID.
+30
+
+31
+00:02:03,040 --> 00:02:07,720
+The information about customers is stored in another table, called 'Customers'.
+31
+
+32
+00:02:07,720 --> 00:02:13,150
+There are several fields, such as first and last names, email address, and the number of times customers
+32
+
+33
+00:02:13,150 --> 00:02:15,670
+have filed a complaint in our store.
+33
+
+34
+00:02:15,670 --> 00:02:18,370
+So, what would the logic of that structure be?
+34
+
+35
+00:02:19,170 --> 00:02:24,360
+Every time we have a customer with an ID number one in the 'Sales' table, we can refer to the customer
+35
+
+36
+00:02:24,360 --> 00:02:32,180
+with ID number one in the 'Customers' table and see her name, email, and number of complaints filed.
+36
+
+37
+00:02:32,180 --> 00:02:34,310
+Same goes for the 'Items' table.
+37
+
+38
+00:02:34,600 --> 00:02:41,120
+It contains the item code, product description, it's unit price ID, and name of the company that has delivered
+38
+
+39
+00:02:41,120 --> 00:02:44,750
+it, and the company's headquarters phone number. Here,
+39
+
+40
+00:02:44,780 --> 00:02:50,840
+the connection between the 'Sales' table and the 'Items' table is not the 'customer ID', but the 'item code'.
+40
+
+41
+00:02:52,540 --> 00:02:57,340
+Well, we could stuff this information into one table and it would look like this.
+41
+
+42
+00:02:58,010 --> 00:02:58,920
+Ouch!
+42
+
+43
+00:02:59,030 --> 00:03:00,320
+It is huge!
+43
+
+44
+00:03:00,350 --> 00:03:05,420
+I would not want to imagine what the table would look like if we had registered over 10 rows!
+44
+
+45
+00:03:05,420 --> 00:03:11,270
+My point is - there are too many columns, and it is hard to understand what type of information is contained
+45
+
+46
+00:03:11,270 --> 00:03:13,040
+in the larger table.
+46
+
+47
+00:03:13,040 --> 00:03:18,710
+Relational algebra allows us to use mathematical logic and create a relation between a few tables in
+47
+
+48
+00:03:18,710 --> 00:03:21,710
+a way that allows us to retrieve data efficiently.
+48
+
+49
+00:03:22,100 --> 00:03:28,610
+Namely, these three tables - 'Sales', 'Customers', and 'Items' - are related through the customer ID or the 'item
+49
+
+50
+00:03:28,610 --> 00:03:35,510
+code' columns and form a relational database. And, importantly, each one bears a specific meaning and contains
+50
+
+51
+00:03:35,510 --> 00:03:37,260
+data characterizing it.
+51
+
+52
+00:03:37,640 --> 00:03:43,130
+One of the tables contains information about sales, the other about customers, and the third about the
+52
+
+53
+00:03:43,130 --> 00:03:44,530
+items.
+53
+
+54
+00:03:44,640 --> 00:03:45,500
+To recap,
+54
+
+55
+00:03:45,570 --> 00:03:51,390
+remember the data values in a row form a record in a table, and each column represents a field that carries
+55
+
+56
+00:03:51,390 --> 00:03:54,030
+specific information about every record.
+56
+
+57
+00:03:54,920 --> 00:04:01,760
+A few related tables form a relational database. And, for those of you who are interested in slightly
+57
+
+58
+00:04:01,760 --> 00:04:07,610
+more technical definitions, remember the smallest unit that can contain a meaningful set of data is called
+58
+
+59
+00:04:07,610 --> 00:04:09,230
+an entity.
+59
+
+60
+00:04:09,230 --> 00:04:12,960
+Therefore, the rows represent the horizontal entity in the table,
+60
+
+61
+00:04:13,100 --> 00:04:15,560
+the columns - its vertical entity.
+61
+
+62
+00:04:15,560 --> 00:04:18,140
+The table is a bigger data entity on its own.
+62
+
+63
+00:04:18,500 --> 00:04:24,940
+It can also be referred to as a database object. A single row of a table, being a single occurrence of
+63
+
+64
+00:04:24,940 --> 00:04:34,160
+that entity, can be also called an entity instance. O. Great! We will gradually build the theoretical preparation
+64
+
+65
+00:04:34,160 --> 00:04:36,410
+you need before you begin coding.
+65
+
+66
+00:04:36,680 --> 00:04:42,680
+Stay tuned for the next lecture, where you'll see SQL's role when working with relational databases.
+66
+
+67
+00:04:42,680 --> 00:04:43,490
+Thanks for watching!

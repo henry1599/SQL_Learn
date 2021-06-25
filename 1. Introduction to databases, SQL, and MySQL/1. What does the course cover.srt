@@ -1,0 +1,316 @@
+0
+1
+00:00:00,910 --> 00:00:08,030
+Hello and welcome to our SQL course! I am Martin and I am a programmer who has spent significant time
+1
+
+2
+00:00:08,030 --> 00:00:10,290
+working with SQL and databases.
+2
+
+3
+00:00:10,460 --> 00:00:15,020
+It is my pleasure to present a course that stands out from the rest of the SQL courses available
+3
+
+4
+00:00:15,020 --> 00:00:16,900
+on Udemy and online.
+4
+
+5
+00:00:17,180 --> 00:00:22,190
+This course is different, because we will not repeat everything written in one of the textbooks about
+5
+
+6
+00:00:22,190 --> 00:00:24,770
+SQL and relational databases.
+6
+
+7
+00:00:24,770 --> 00:00:30,110
+Instead I will provide you with the set of SQL practical tools you will need at your workplace.
+7
+
+8
+00:00:30,200 --> 00:00:31,670
+No useless concepts.
+8
+
+9
+00:00:31,700 --> 00:00:35,200
+Everything is straight to the point and easy to understand.
+9
+
+10
+00:00:35,300 --> 00:00:40,820
+The curriculum we have prepared for you comprises a heterogeneous set of topics data analysts and data
+10
+
+11
+00:00:40,820 --> 00:00:48,260
+managers need in their daily work. SQL allows these professionals to manipulate large sets of data.
+11
+
+12
+00:00:48,260 --> 00:00:54,610
+An advantage of using SQL is its syntax is intuitive, which predisposes you to learn it quickly.
+12
+
+13
+00:00:54,650 --> 00:00:59,400
+You'll first need to internalize the meaning of a few specific terms if you want to grasp the wide
+13
+
+14
+00:00:59,420 --> 00:01:04,850
+scope of its application and the ease with which this language can solve sophisticated tasks.
+14
+
+15
+00:01:04,850 --> 00:01:10,430
+Therefore, in the first part of this course, we will focus on explaining databases, database management
+15
+
+16
+00:01:10,430 --> 00:01:12,490
+systems, and SQL.
+16
+
+17
+00:01:12,710 --> 00:01:16,740
+I have organized the videos so the abstract ideas are easy to understand.
+17
+
+18
+00:01:16,970 --> 00:01:23,020
+No, this will not be a set of boring theoretical SQL concepts you'll never hear at your workplace.
+18
+
+19
+00:01:23,270 --> 00:01:29,390
+This is precisely the knowledge you need to understand how to work with data, tables, relational database
+19
+
+20
+00:01:29,390 --> 00:01:33,080
+management systems, and their visual representation!
+20
+
+21
+00:01:33,080 --> 00:01:35,790
+Before we start, I would like to ask a favor.
+21
+
+22
+00:01:35,840 --> 00:01:38,940
+Do not skip any of the lectures in the first part!
+22
+
+23
+00:01:39,140 --> 00:01:44,810
+I promise they will help you develop the perfect orientation and logical reasoning required for smooth,
+23
+
+24
+00:01:44,990 --> 00:01:47,780
+high-quality coding throughout the course.
+24
+
+25
+00:01:47,780 --> 00:01:52,370
+After the first part, we'll show you how to setup the software environment you'll need in this course,
+25
+
+26
+00:01:52,850 --> 00:01:56,390
+and you'll be able to roll up your sleeves and start programming.
+26
+
+27
+00:01:56,390 --> 00:02:00,450
+The best part is you won't just see how you can work with an existing database.
+27
+
+28
+00:02:00,470 --> 00:02:04,850
+We will show you how to create an entirely new database from scratch!
+28
+
+29
+00:02:04,910 --> 00:02:06,550
+That's great, right?
+29
+
+30
+00:02:06,560 --> 00:02:08,320
+Just wait to hear what comes after that.
+30
+
+31
+00:02:08,480 --> 00:02:12,380
+In this course, we will work with a real-world database from GitHub.
+31
+
+32
+00:02:12,680 --> 00:02:18,660
+It is large enough and will give you a good idea of how we can use SQL in real-life situations.
+32
+
+33
+00:02:18,680 --> 00:02:22,930
+It is not a small data set gathered for a beginners' course.
+33
+
+34
+00:02:22,960 --> 00:02:25,550
+I am sure you will appreciate this aspect of the course.
+34
+
+35
+00:02:25,570 --> 00:02:29,110
+We believe this is the right way to learn as well.
+35
+
+36
+00:02:29,140 --> 00:02:34,600
+Then, after you learn how to set up a database on your own, you will plunge into the wonderful world of
+36
+
+37
+00:02:34,600 --> 00:02:36,500
+data manipulation.
+37
+
+38
+00:02:36,520 --> 00:02:41,320
+This is the section where you will learn how powerful SQL can be when used for the extraction of
+38
+
+39
+00:02:41,320 --> 00:02:44,220
+information and insights from a database.
+39
+
+40
+00:02:44,350 --> 00:02:50,060
+You'll go through: 
+- the classical SQL statements 
+- column and table constraints 
+- functions.
+40
+
+41
+00:02:50,140 --> 00:02:55,200
+Then, we will cover more sophisticated topics such as: 
+- joins
+- subqueries
+41
+
+42
+00:02:55,240 --> 00:03:02,410
+- self-joins
+- views. 
+Finally, we'll be ready to learn how to work with some tools professionals love to
+42
+
+43
+00:03:02,410 --> 00:03:05,770
+use: stored procedures and functions.
+43
+
+44
+00:03:05,770 --> 00:03:10,450
+We will conclude the course by learning about a few challenging advanced SQL techniques, such as
+44
+
+45
+00:03:10,450 --> 00:03:12,560
+triggers and indexes.
+45
+
+46
+00:03:12,820 --> 00:03:18,790
+Besides the fundamentals, this course will teach you a solid set of useful topics, tips, tricks, and sharp
+46
+
+47
+00:03:18,790 --> 00:03:21,850
+skills that will give you an edge in the market.
+47
+
+48
+00:03:21,850 --> 00:03:26,730
+I am a firm believer in the statement: 'the most effective way to learn is by doing'.
+48
+
+49
+00:03:26,890 --> 00:03:32,770
+This is valid especially for SQL, because the difficulty of the tasks you must deal with at work
+49
+
+50
+00:03:32,860 --> 00:03:34,980
+require previous experience.
+50
+
+51
+00:03:35,230 --> 00:03:38,760
+So, please do the exercises attached to the lectures!
+51
+
+52
+00:03:38,770 --> 00:03:40,600
+They will be in the form of quiz questions
+52
+
+53
+00:03:40,600 --> 00:03:44,030
+and will reinforce everything you have learned in the lessons.
+53
+
+54
+00:03:44,230 --> 00:03:48,010
+Should you have any queries, please reach out and write in the Q&A section.
+54
+
+55
+00:03:48,040 --> 00:03:51,580
+We will be happy to answer within one or two business days.
+55
+
+56
+00:03:51,580 --> 00:03:57,240
+In addition, throughout the course and in my practice, I stick to best practices and clean coding.
+56
+
+57
+00:03:57,490 --> 00:04:01,270
+Remember, a well organized, or good code, is not the one
+57
+
+58
+00:04:01,270 --> 00:04:03,050
+computers can understand.
+58
+
+59
+00:04:03,160 --> 00:04:03,920
+It is the one
+59
+
+60
+00:04:03,950 --> 00:04:06,920
+humans can understand.
+60
+
+61
+00:04:06,960 --> 00:04:09,030
+So... what are you waiting for?
+61
+
+62
+00:04:09,060 --> 00:04:12,450
+Dive straight in and let's begin this journey together!

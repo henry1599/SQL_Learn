@@ -1,0 +1,139 @@
+0
+1
+00:00:00,720 --> 00:00:07,440
+OK, so... at this point you might be telling yourself: Great Let me install a software containing SQL and
+1
+
+2
+00:00:07,440 --> 00:00:08,780
+start the course.
+2
+
+3
+00:00:08,790 --> 00:00:14,220
+Unfortunately, it is not so simple. Why? To implement SQL commands,
+3
+
+4
+00:00:14,220 --> 00:00:18,990
+you will need a database management system, often called a database or a platform.
+4
+
+5
+00:00:18,990 --> 00:00:25,350
+The problem is there are a few popular databases out there, which are all based on SQL. They support
+5
+
+6
+00:00:25,380 --> 00:00:30,920
+various forms of the original language and there are only slight differences between different versions.
+6
+
+7
+00:00:30,960 --> 00:00:36,540
+As a developer, you want to learn how to use the one that is the most suitable for your situation.
+7
+
+8
+00:00:36,570 --> 00:00:39,440
+We will base our course entirely on MySQL,
+8
+
+9
+00:00:39,510 --> 00:00:45,150
+but you should know there are other platforms like Oracle, SQLite, Microsoft SQL Server,
+9
+
+10
+00:00:45,390 --> 00:00:46,450
+postscripts sequel.
+10
+
+11
+00:00:46,500 --> 00:00:50,090
+Maria DB, Microsoft Access, and so on.
+11
+
+12
+00:00:50,280 --> 00:00:55,050
+The minor differences between the versions of the SQL language mean that transferring from one database
+12
+
+13
+00:00:55,050 --> 00:01:00,150
+to the other (which usually happens if your changing jobs) would not be an obstacle for you.
+13
+
+14
+00:01:00,420 --> 00:01:06,270
+If you are a user of another platform, you can still take this course and easily apply the tools we teach.
+14
+
+15
+00:01:06,270 --> 00:01:13,070
+So, why do we choose MySQL? Because it is reliable mature and open source.
+15
+
+16
+00:01:13,080 --> 00:01:14,760
+The latter means it is free.
+16
+
+17
+00:01:14,790 --> 00:01:21,370
+It is used by many institutions and companies, including Facebook YouTube, Dropbox, Twitter, Pinterest, Booking.com
+17
+
+18
+00:01:21,420 --> 00:01:23,760
+and LinkedIn.
+18
+
+19
+00:01:24,060 --> 00:01:30,300
+Considering the well-renowned DB-Engines Ranking, MySQL comes as the first open-source relational
+19
+
+20
+00:01:30,300 --> 00:01:32,850
+database management system. Yes, 
+20
+
+21
+00:01:32,910 --> 00:01:35,840
+Oracle is on top with only a slight advantage,
+21
+
+22
+00:01:35,880 --> 00:01:39,310
+but don't forget it is a paid software!
+22
+
+23
+00:01:39,660 --> 00:01:43,320
+Therefore, aiming at providing you with the best experience possible,
+23
+
+24
+00:01:43,380 --> 00:01:45,670
+we chose MySQL.
+24
+
+25
+00:01:45,720 --> 00:01:49,200
+Now let's dig into some Database and SQL theory.
+25
+
+26
+00:01:49,200 --> 00:01:54,210
+This will provide the set of tools you'll need when we deal with various SQL tasks in the lessons
+26
+
+27
+00:01:54,210 --> 00:01:55,350
+to come.
+27
+
+28
+00:01:55,350 --> 00:01:56,260
+Thanks for watching!
