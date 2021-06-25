@@ -1,0 +1,187 @@
+1
+00:00:00,850 --> 00:00:01,830
+Right.
+
+2
+00:00:01,860 --> 00:00:08,080
+So in this lesson we will show you another way to insert data into a table.
+
+3
+00:00:08,430 --> 00:00:15,660
+The relevant syntax is insert into table name and column names in parentheses.
+
+4
+00:00:15,660 --> 00:00:17,580
+Then comes the new part.
+
+5
+00:00:17,580 --> 00:00:23,310
+You can use a classical select statement to retrieve information from some other table and inserted
+
+6
+00:00:23,310 --> 00:00:24,980
+into this table here.
+
+7
+00:00:26,920 --> 00:00:34,260
+It doesn't have to be the entire table from that other table by using where you should be able to set
+
+8
+00:00:34,260 --> 00:00:37,240
+conditions that would refine the data to be copied.
+
+9
+00:00:40,740 --> 00:00:42,260
+Let's see an example.
+
+10
+00:00:43,890 --> 00:00:49,120
+First check the columns of the department's table.
+
+11
+00:00:49,150 --> 00:00:53,740
+We have two columns department code and department name.
+
+12
+00:00:53,740 --> 00:00:59,590
+So the next thing to do is create another table called deps duplicate.
+
+13
+00:00:59,710 --> 00:01:05,920
+Shortening it to departments underscore d'you see it will be a replica of the department's table.
+
+14
+00:01:05,950 --> 00:01:17,250
+We just saw here our task is to import all the data from departments into its duplicate OK.
+
+15
+00:01:18,210 --> 00:01:25,350
+The code will need to create the copy table is create table departments duplicate open parentheses department
+
+16
+00:01:25,350 --> 00:01:35,580
+number char type of four not no constraint added Then department name var char 40 not constrain again
+
+17
+00:01:35,910 --> 00:01:46,870
+close parentheses execute and then refresh the schema section and workbench.
+
+18
+00:01:46,880 --> 00:01:47,830
+Here we are.
+
+19
+00:01:48,020 --> 00:01:51,310
+The new table has been added to the list.
+
+20
+00:01:51,320 --> 00:01:59,930
+Furthermore the department number and department name columns are visible to great to verify that this
+
+21
+00:01:59,930 --> 00:02:01,360
+is still an empty table.
+
+22
+00:02:01,370 --> 00:02:06,390
+We have to select all the information from it.
+
+23
+00:02:06,410 --> 00:02:10,080
+You see there is no information.
+
+24
+00:02:10,080 --> 00:02:14,280
+Now is the time to implement the structure we introduced in this lecture.
+
+25
+00:02:14,280 --> 00:02:20,280
+We will insert into the department number and department name columns from the department's duplicate
+
+26
+00:02:20,280 --> 00:02:20,820
+table.
+
+27
+00:02:20,820 --> 00:02:26,390
+Everything we can select from the department's table.
+
+28
+00:02:26,460 --> 00:02:32,250
+Please note that since deps contains the same number and type of columns it is not necessary to add
+
+29
+00:02:32,250 --> 00:02:35,820
+specific conditions to the data retrieved from the table.
+
+30
+00:02:35,940 --> 00:02:42,170
+Hence the star wildcard character will do the job properly right.
+
+31
+00:02:42,260 --> 00:02:47,260
+So let's run this query OK.
+
+32
+00:02:47,300 --> 00:02:51,090
+The code was executed with no errors.
+
+33
+00:02:51,090 --> 00:02:56,170
+Let's see if the operation was performed correctly.
+
+34
+00:02:56,360 --> 00:03:03,590
+It was most definitely we see that the newly created departments duplicate table has been filled with
+
+35
+00:03:03,590 --> 00:03:05,930
+information from the departments table.
+
+36
+00:03:06,140 --> 00:03:07,480
+That's awesome.
+
+37
+00:03:07,490 --> 00:03:12,050
+In other words our job is done.
+
+38
+00:03:12,080 --> 00:03:17,660
+I'd like to wrap up this lecture with a reminder about my Majeski Well constraints we barely mentioned
+
+39
+00:03:17,660 --> 00:03:19,040
+them in this section.
+
+40
+00:03:19,050 --> 00:03:24,890
+However you know that unless the new data you are inserting satisfies the constraints that have already
+
+41
+00:03:24,890 --> 00:03:29,260
+been set in the database my S Q Will will always show an error.
+
+42
+00:03:29,330 --> 00:03:34,940
+For simplicity we carefully designed our code and such errors were avoided.
+
+43
+00:03:34,940 --> 00:03:42,000
+In other words we ensured we did not insert data that does not satisfy the existing constraints.
+
+44
+00:03:42,110 --> 00:03:46,970
+Nevertheless keep in mind that complying with constraints is essential.
+
+45
+00:03:46,970 --> 00:03:50,500
+They will always play a major role when inserting data.
+
+46
+00:03:50,510 --> 00:03:53,370
+I hope you enjoyed the lectures from this short section.
+
+47
+00:03:53,600 --> 00:03:54,680
+Thank you for watching.

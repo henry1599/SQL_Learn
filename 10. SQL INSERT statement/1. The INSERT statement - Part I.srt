@@ -1,0 +1,283 @@
+1
+00:00:00,870 --> 00:00:05,440
+We started this course by presenting a brief introduction to Eskew Well theory.
+
+2
+00:00:05,670 --> 00:00:12,900
+We continued by explaining how tables can be created and how to use the insert statement.
+
+3
+00:00:13,020 --> 00:00:15,660
+Later we learned how to create tables.
+
+4
+00:00:15,770 --> 00:00:19,130
+You were able to set up the entire cell's database on your own.
+
+5
+00:00:19,140 --> 00:00:21,750
+Remember that's awesome.
+
+6
+00:00:22,170 --> 00:00:29,430
+Now in this section we are ready to explore the insert statement in a bit more detail.
+
+7
+00:00:29,550 --> 00:00:33,370
+Let's practice inserting a few records in the Employees table.
+
+8
+00:00:34,820 --> 00:00:40,760
+We can extract 10 records from the Employees table to see all the information is organized there.
+
+9
+00:00:40,760 --> 00:00:44,470
+Please allow me to make the following remark in the last lecture.
+
+10
+00:00:44,540 --> 00:00:50,200
+We increase the limit of rows displayed in an output to infinity.
+
+11
+00:00:50,250 --> 00:00:57,670
+So in the queries in this lecture I will place limits through the limit clause great.
+
+12
+00:00:57,870 --> 00:01:04,590
+So execute and ha nice.
+
+13
+00:01:04,700 --> 00:01:09,290
+We retrieved 10 rows all containing information in the following columns.
+
+14
+00:01:09,290 --> 00:01:15,530
+Employee number birth date first and last name gender and hire date.
+
+15
+00:01:15,530 --> 00:01:17,900
+A total of six columns.
+
+16
+00:01:17,980 --> 00:01:26,570
+OK let's see how to create a record in the Employees table after the key word phrase insert into.
+
+17
+00:01:26,620 --> 00:01:30,400
+We must specify the name of the table where we went to add information.
+
+18
+00:01:31,710 --> 00:01:37,030
+Then within parentheses we must indicate the column names where data will be inserted.
+
+19
+00:01:38,220 --> 00:01:39,750
+Please pay attention.
+
+20
+00:01:39,750 --> 00:01:45,360
+You don't have to use the names of all six columns you can designate only those in which you would like
+
+21
+00:01:45,360 --> 00:01:47,790
+to insert data.
+
+22
+00:01:47,790 --> 00:01:49,740
+What follows is intuitive.
+
+23
+00:01:49,740 --> 00:01:55,560
+The values keyword succeeded by the same number of data values as the number of columns indicated in
+
+24
+00:01:55,560 --> 00:01:58,960
+the parentheses after the insert into statement.
+
+25
+00:02:00,200 --> 00:02:05,120
+Know that the data values should be typed within parentheses to.
+
+26
+00:02:05,200 --> 00:02:08,560
+You are already acquainted with the syntax we just discussed.
+
+27
+00:02:08,560 --> 00:02:10,760
+Now let's put it into practice.
+
+28
+00:02:12,970 --> 00:02:21,340
+Will create a record of an individual named John Smith will type insert into employees and then within
+
+29
+00:02:21,340 --> 00:02:28,250
+parentheses specify the columns we want to add information into separating them by a comma.
+
+30
+00:02:28,270 --> 00:02:43,160
+These columns are employee number birth date first name last name gender and hire date then after the
+
+31
+00:02:43,160 --> 00:02:51,910
+keyword values and within parentheses type the data values that will be part of these columns again
+
+32
+00:02:52,120 --> 00:02:57,450
+separating them by a comma to see the Data Types of the values you will insert.
+
+33
+00:02:57,460 --> 00:03:01,310
+You must check the data types of this table's fields.
+
+34
+00:03:01,340 --> 00:03:06,910
+You can do this by going to the information section and looking at the data types in the columns tab.
+
+35
+00:03:09,140 --> 00:03:11,170
+The employee number is an integer.
+
+36
+00:03:11,270 --> 00:03:16,770
+Then you have to date values to var char values and an ENM.
+
+37
+00:03:16,850 --> 00:03:22,190
+Therefore as you insert the new records all values must be written in single quotes.
+
+38
+00:03:22,250 --> 00:03:23,900
+Besides the employee number
+
+39
+00:03:26,450 --> 00:03:36,720
+great let's assign the number 9 9 9 9 0 1 and a birth date of the 21st of April 1986
+
+40
+00:03:40,230 --> 00:03:46,650
+This record will refer to John Smith.
+
+41
+00:03:46,830 --> 00:03:47,280
+M.
+
+42
+00:03:50,400 --> 00:03:53,610
+who is hired on the 1st of January 2011
+
+43
+00:03:56,880 --> 00:04:05,100
+to register this row in the data table will need to execute the insert query.
+
+44
+00:04:05,130 --> 00:04:09,420
+All right we see that we have one row affected.
+
+45
+00:04:09,460 --> 00:04:14,890
+Now let's select the 10 employees with the largest employee numbers to see if our record will appear
+
+46
+00:04:14,890 --> 00:04:15,490
+there.
+
+47
+00:04:18,850 --> 00:04:19,620
+Awesome.
+
+48
+00:04:19,630 --> 00:04:22,940
+Here he is John Smith is on the top.
+
+49
+00:04:24,430 --> 00:04:29,030
+Let me comment on this bizarre number 9 9 9 9 0 1.
+
+50
+00:04:29,470 --> 00:04:35,680
+Obviously this is not the next consecutive number in our super long list of employees is it.
+
+51
+00:04:35,680 --> 00:04:40,000
+Remember that using such an employee number is a neat professional trick.
+
+52
+00:04:40,000 --> 00:04:45,920
+When data is being created to test the database system the value inserted should be quite high.
+
+53
+00:04:46,030 --> 00:04:49,810
+This way it is obvious where the new data has been placed.
+
+54
+00:04:49,840 --> 00:04:55,690
+For this reason we saw John Smith on the top of the employee's list with the highest employee number
+
+55
+00:04:57,350 --> 00:04:58,070
+OK.
+
+56
+00:04:58,220 --> 00:04:58,900
+Great.
+
+57
+00:04:59,120 --> 00:05:01,570
+Let's move on now.
+
+58
+00:05:01,610 --> 00:05:04,570
+Let me share another my will feature with you.
+
+59
+00:05:04,760 --> 00:05:10,950
+Contrary to anything we've said so far it turns out that integers can be written within quotes too.
+
+60
+00:05:11,390 --> 00:05:17,120
+If you wish you can try inserting another record with the employee number within quotes you'll see the
+
+61
+00:05:17,120 --> 00:05:19,570
+data is still registered as an integer.
+
+62
+00:05:19,580 --> 00:05:26,720
+The explanation why is that my ask you will will automatically or some professionals would say transparently
+
+63
+00:05:27,140 --> 00:05:30,140
+convert the string into an integer.
+
+64
+00:05:30,160 --> 00:05:33,730
+The best practice is to avoid writing integers with in quotes.
+
+65
+00:05:33,760 --> 00:05:39,970
+Since this conversion consumes time and prevents the smooth operation of more advanced minuscule features
+
+66
+00:05:40,630 --> 00:05:47,530
+to conclude the idea is that yes you could write an integer with in quotes but this is not considered
+
+67
+00:05:47,530 --> 00:05:49,240
+a best practice.
+
+68
+00:05:49,240 --> 00:05:52,700
+That's why we would like to give you the following piece of advice.
+
+69
+00:05:52,720 --> 00:06:00,530
+Please remember to type integers as plain numbers without using quotes great.
+
+70
+00:06:00,580 --> 00:06:03,340
+Let's keep up the pace for our next video.
+
+71
+00:06:03,340 --> 00:06:04,340
+See you there.

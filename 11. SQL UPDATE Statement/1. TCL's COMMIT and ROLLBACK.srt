@@ -1,0 +1,143 @@
+1
+00:00:00,850 --> 00:00:06,500
+Rollback to start this section we will refer to the transaction controlling which lecture you saw at
+
+2
+00:00:06,500 --> 00:00:12,200
+the very beginning of the course where we explain how Committee can be used to save the state of the
+
+3
+00:00:12,200 --> 00:00:13,550
+data and the database.
+
+4
+00:00:13,550 --> 00:00:16,770
+At the moment of its execution rollback.
+
+5
+00:00:16,790 --> 00:00:22,940
+On the other hand is a command that can bring the state of the data a step back but not more than that
+
+6
+00:00:23,570 --> 00:00:29,150
+it will refer to the state corresponding to the last time you executed commit.
+
+7
+00:00:29,170 --> 00:00:36,980
+This means if you have already used commit 10 times rollback will have an effect on the last execution
+
+8
+00:00:36,980 --> 00:00:40,330
+you have performed after that moment.
+
+9
+00:00:40,330 --> 00:00:47,200
+Even if you run the rollback clause 20 times you can get to the state of only the last commit you cannot
+
+10
+00:00:47,260 --> 00:00:51,600
+restore data to a state corresponding to an earlier commit.
+
+11
+00:00:51,700 --> 00:00:56,220
+In a nutshell these are the rules regarding transaction control.
+
+12
+00:00:56,350 --> 00:00:59,680
+We must be very careful when using commit and rollback.
+
+13
+00:00:59,710 --> 00:01:04,030
+In other words when we are changing the state of our data set.
+
+14
+00:01:04,030 --> 00:01:09,580
+Please note that it will be very hard to practice these statements unless we switch off the following
+
+15
+00:01:09,580 --> 00:01:11,910
+feature of workbench.
+
+16
+00:01:12,010 --> 00:01:20,600
+We can expand the edit tab from the main menu and opt for preferences on the left hand side of the window
+
+17
+00:01:20,600 --> 00:01:26,660
+that pops up choose the editor section on the right hand side.
+
+18
+00:01:26,720 --> 00:01:33,560
+Scroll down to get to the box that says safe updates through the ticking of this option.
+
+19
+00:01:33,570 --> 00:01:38,640
+The software could prevent you from losing significant amounts of data or some of the changes you made
+
+20
+00:01:38,640 --> 00:01:39,760
+earlier.
+
+21
+00:01:39,810 --> 00:01:46,950
+However it could also eliminate the possibility of controlling the state of the data in our database.
+
+22
+00:01:46,960 --> 00:01:49,210
+None of these two features will help us here though.
+
+23
+00:01:49,300 --> 00:01:52,270
+That's why we will continue without enabling this option.
+
+24
+00:01:52,330 --> 00:01:53,620
+Please turn it off.
+
+25
+00:01:55,450 --> 00:01:57,310
+Great.
+
+26
+00:01:57,380 --> 00:02:03,890
+And please remember that after turning off the safe updates option you must be very careful when updating
+
+27
+00:02:03,890 --> 00:02:04,870
+and deleting data.
+
+28
+00:02:04,880 --> 00:02:11,240
+In my view well one can always make a simple mistake that could result in the loss of a large amount
+
+29
+00:02:11,240 --> 00:02:12,390
+of data.
+
+30
+00:02:12,410 --> 00:02:17,170
+That's not what we want to happen is it OK.
+
+31
+00:02:17,230 --> 00:02:23,560
+One last thing to properly switch off the safe updates reconnection to the database is required.
+
+32
+00:02:23,680 --> 00:02:26,320
+So let's exit this connection.
+
+33
+00:02:28,090 --> 00:02:32,560
+And then reconnect typing the password once again.
+
+34
+00:02:35,380 --> 00:02:36,340
+Lovely.
+
+35
+00:02:36,400 --> 00:02:40,110
+Now we are ready to dive into the update statement lecture.
+
+36
+00:02:40,120 --> 00:02:40,920
+See you there.

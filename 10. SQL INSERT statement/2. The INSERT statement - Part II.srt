@@ -1,0 +1,107 @@
+1
+00:00:00,950 --> 00:00:08,780
+Okay perfect Let's go ahead with the insert clause usually database administrators follow the order
+
+2
+00:00:08,780 --> 00:00:14,010
+of columns in terms of the way they appear in a given data table.
+
+3
+00:00:14,050 --> 00:00:19,690
+However on certain occasions they prefer inserting data values in a different order.
+
+4
+00:00:19,780 --> 00:00:23,900
+My Eskew Well allows for such types of data insertion.
+
+5
+00:00:24,060 --> 00:00:28,420
+For instance should we create a data record about Patricia Lawrence.
+
+6
+00:00:28,440 --> 00:00:37,210
+We would insert her birth date first then her employee number and then site the rest of the values in
+
+7
+00:00:37,210 --> 00:00:41,550
+the designated order.
+
+8
+00:00:41,590 --> 00:00:43,470
+Let's see if it works.
+
+9
+00:00:47,580 --> 00:00:49,190
+100 percent.
+
+10
+00:00:49,440 --> 00:00:53,820
+The last row we created contains information about Patricia Laurent's.
+
+11
+00:00:54,030 --> 00:01:00,030
+So please keep in mind that we must put the values in the exact order we have listed the column names
+
+12
+00:01:02,120 --> 00:01:05,100
+fantastic OK.
+
+13
+00:01:05,180 --> 00:01:10,070
+Let's take a look at an interesting feature of the insert syntax.
+
+14
+00:01:10,160 --> 00:01:15,710
+Technically the first pair of parentheses along with the column names between them can be omitted.
+
+15
+00:01:16,600 --> 00:01:21,950
+Only insert into the table name and the values parts are mandatory.
+
+16
+00:01:23,870 --> 00:01:29,810
+If you omitted in the values section you will have to specify as many data values as there are columns
+
+17
+00:01:29,870 --> 00:01:31,120
+in the data table.
+
+18
+00:01:31,340 --> 00:01:36,900
+Furthermore you will have to add them in the same order in which they appear in the table.
+
+19
+00:01:36,950 --> 00:01:45,650
+For example if we use this structure and try to create a record in the Employees table with only four
+
+20
+00:01:45,740 --> 00:01:55,430
+instead of six columns my rescue will will display an error if we try to add six data values to the
+
+21
+00:01:55,430 --> 00:01:56,450
+new record.
+
+22
+00:01:56,480 --> 00:01:59,100
+All of them in the correct order.
+
+23
+00:01:59,250 --> 00:02:01,210
+The query should work fine.
+
+24
+00:02:01,530 --> 00:02:02,340
+Let's check
+
+25
+00:02:06,870 --> 00:02:14,070
+good the new piece of information is there in the next video we will show you a very powerful feature
+
+26
+00:02:14,070 --> 00:02:17,300
+of the insert statement that will do for now.
+
+27
+00:02:17,340 --> 00:02:18,290
+Thanks for watching.

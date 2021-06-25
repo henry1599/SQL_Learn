@@ -1,0 +1,139 @@
+1
+00:00:01,480 --> 00:00:07,900
+When updating your table the WHERE clause is crucial although by default and my skew Well it is set
+
+2
+00:00:07,900 --> 00:00:15,580
+to be optional if you don't provide a WHERE condition all rows of the table will be updated.
+
+3
+00:00:15,660 --> 00:00:18,720
+Check what we have in the department's duplicate table.
+
+4
+00:00:20,500 --> 00:00:28,990
+Nine rows into columns with information good for the sake of this exercise we will change all the department
+
+5
+00:00:28,990 --> 00:00:31,510
+numbers and names in this table.
+
+6
+00:00:31,510 --> 00:00:34,870
+Right before that we will execute a commit command.
+
+7
+00:00:34,930 --> 00:00:40,160
+It will save the data set as we see it.
+
+8
+00:00:40,270 --> 00:00:46,240
+Now if we write the code that updates the department duplicate table setting a department number equal
+
+9
+00:00:46,240 --> 00:00:55,400
+to 1 1 and a department name quality control and then run it we will modify all rows of the data table.
+
+10
+00:00:55,410 --> 00:00:56,540
+Is this true.
+
+11
+00:00:56,730 --> 00:01:00,050
+Let's see.
+
+12
+00:01:00,260 --> 00:01:01,390
+Absolutely.
+
+13
+00:01:01,550 --> 00:01:06,430
+Deps duplicate is a table now comprising identical rows.
+
+14
+00:01:06,500 --> 00:01:11,420
+This would typically happen by mistake when the where clause and the accompanying conditions have not
+
+15
+00:01:11,420 --> 00:01:13,190
+been added.
+
+16
+00:01:13,240 --> 00:01:17,950
+If we've done this by accident is there a way to go back.
+
+17
+00:01:18,070 --> 00:01:23,470
+Of course we can do that by applying the rollback command when executed.
+
+18
+00:01:23,470 --> 00:01:29,440
+It will take us to the last comment that has been run or if we have not run a commit command beforehand
+
+19
+00:01:29,710 --> 00:01:37,470
+it will take us to the beginning of the entire rescue code and we will potentially lose hours of work.
+
+20
+00:01:37,480 --> 00:01:41,440
+That's why it is important to commit the changes we made a minute ago.
+
+21
+00:01:41,620 --> 00:01:48,160
+Remember you should be careful when using this command because once you execute commit you can not reverse
+
+22
+00:01:48,340 --> 00:01:49,690
+any change.
+
+23
+00:01:50,880 --> 00:01:55,710
+So after running rollback Where will we go back to let's check
+
+24
+00:02:00,820 --> 00:02:01,810
+perfect.
+
+25
+00:02:01,990 --> 00:02:09,180
+We see the information we had in the department's duplicate table at the beginning of this lecture assume
+
+26
+00:02:09,180 --> 00:02:12,600
+we need the current version of this table for our next lecture.
+
+27
+00:02:12,840 --> 00:02:19,580
+Thus it will be very important to execute another commit statement here let's do it.
+
+28
+00:02:21,610 --> 00:02:22,730
+Fantastic.
+
+29
+00:02:22,930 --> 00:02:28,060
+What we can infer from the lessons about the update statement is that you will rarely have to update
+
+30
+00:02:28,090 --> 00:02:34,210
+an entire table rather you'll have to indicate the exact condition that must be satisfied.
+
+31
+00:02:36,660 --> 00:02:41,100
+If you don't you risk turning your data set into a mess.
+
+32
+00:02:41,130 --> 00:02:47,840
+So please be very careful in setting a condition in the WHERE clause of the update statement.
+
+33
+00:02:47,840 --> 00:02:48,680
+Wonderful.
+
+34
+00:02:50,190 --> 00:02:53,550
+Next we will deal with the delete statement.
+
+35
+00:02:53,550 --> 00:02:54,750
+Thanks for watching.
