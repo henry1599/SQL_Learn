@@ -1,0 +1,379 @@
+1
+00:00:01,160 --> 00:00:05,050
+Joining tables is not always sufficient to solve a problem.
+
+2
+00:00:05,090 --> 00:00:10,680
+The exercise you just completed was a demonstration that union allows you to combine the result set
+
+3
+00:00:10,790 --> 00:00:12,920
+of two select statements.
+
+4
+00:00:12,920 --> 00:00:19,200
+So remember this trick because you are often needed at your workplace.
+
+5
+00:00:19,240 --> 00:00:27,130
+Another interesting school tool worth remembering is the self-join it is applied when a table must join
+
+6
+00:00:27,130 --> 00:00:28,180
+itself.
+
+7
+00:00:28,180 --> 00:00:30,400
+This is not a rare event.
+
+8
+00:00:30,400 --> 00:00:36,370
+If you'd like to combine certain rows of a table with other rows of the same table you need a self-join
+
+9
+00:00:36,970 --> 00:00:40,180
+to better understand the mechanics of this Escudo instrument.
+
+10
+00:00:40,210 --> 00:00:42,640
+Look at the following visualization.
+
+11
+00:00:42,640 --> 00:00:45,690
+Think of a case in which you are joining two tables.
+
+12
+00:00:45,730 --> 00:00:51,640
+Previously we saw how this is done with different tables in a self join statement.
+
+13
+00:00:51,670 --> 00:00:56,590
+You will have to comply with the same logical and syntactic structure.
+
+14
+00:00:56,590 --> 00:01:03,860
+However the two tables will be identical to the table you'll be using in the self-join you can think
+
+15
+00:01:03,860 --> 00:01:08,130
+of them as virtual projections of the underlying base table.
+
+16
+00:01:09,690 --> 00:01:11,590
+OK good.
+
+17
+00:01:11,700 --> 00:01:17,790
+So the self-join will reference both implied tables and will treat them as two separate tables in its
+
+18
+00:01:17,790 --> 00:01:19,110
+operations.
+
+19
+00:01:20,390 --> 00:01:27,290
+Furthermore the data used will not come from two sources but from a single source which is the underlying
+
+20
+00:01:27,290 --> 00:01:29,380
+table that stores data physically
+
+21
+00:01:31,820 --> 00:01:33,060
+great.
+
+22
+00:01:33,260 --> 00:01:38,350
+Earlier when we joined separate tables using aliases was at our discretion.
+
+23
+00:01:38,600 --> 00:01:46,100
+It was done mainly for convenience here using aliases is obligatory only they can help us distinguish
+
+24
+00:01:46,100 --> 00:01:48,470
+the two virtual tables.
+
+25
+00:01:48,470 --> 00:01:51,580
+But here comes the tricky part.
+
+26
+00:01:51,710 --> 00:01:58,000
+These references to the original table let you use different blocks of the available data.
+
+27
+00:01:58,030 --> 00:02:03,400
+You can either filter both in the join or you can filter one of them in the WHERE clause and the other
+
+28
+00:02:03,400 --> 00:02:06,340
+one in the join.
+
+29
+00:02:06,350 --> 00:02:14,420
+If this sounds strange Please don't worry we will provide examples of both cases later in this lecture.
+
+30
+00:02:14,460 --> 00:02:21,370
+So our task is from the employee manager table created in the previous exercise.
+
+31
+00:02:21,420 --> 00:02:22,870
+Extract the record data.
+
+32
+00:02:22,920 --> 00:02:26,040
+Only of those employees who are managers as well
+
+33
+00:02:28,870 --> 00:02:29,750
+OK.
+
+34
+00:02:31,000 --> 00:02:32,800
+Observing the table obtained
+
+35
+00:02:35,460 --> 00:02:38,880
+we can expect to have only two rows affected by our query
+
+36
+00:02:43,460 --> 00:02:46,780
+nice.
+
+37
+00:02:46,830 --> 00:02:53,890
+Let's look at the code we are using the structure of the JOIN syntax.
+
+38
+00:02:53,970 --> 00:03:01,430
+Also we are joining the same table to itself providing different aliases for each virtual table.
+
+39
+00:03:03,290 --> 00:03:10,460
+However the connection is made with different columns of the base table and we would like to extract
+
+40
+00:03:10,640 --> 00:03:16,280
+everything from the first table provided that its employee number equals the manager number of the other
+
+41
+00:03:16,280 --> 00:03:17,010
+table.
+
+42
+00:03:20,620 --> 00:03:23,230
+Let's run this query and observe the output
+
+43
+00:03:25,750 --> 00:03:27,820
+Wow 42 rows.
+
+44
+00:03:28,120 --> 00:03:30,930
+What happened.
+
+45
+00:03:31,070 --> 00:03:36,380
+The query connected the employee numbers of the first table coinciding with managing numbers with the
+
+46
+00:03:36,380 --> 00:03:39,750
+records from the manager number column of the second table.
+
+47
+00:03:42,110 --> 00:03:51,860
+So we have two records from the left side 1 1 0 0 22 and 1 1 0 0 39 connected to 42 records on the right
+
+48
+00:03:51,860 --> 00:03:55,780
+side having the same values.
+
+49
+00:03:55,800 --> 00:04:02,770
+So why do you see 22 against 39 and 39 against 22 and not something else.
+
+50
+00:04:05,480 --> 00:04:07,370
+Here's the explanation.
+
+51
+00:04:07,370 --> 00:04:12,890
+Every time a connection between two implied tables is established all data of the corresponding row
+
+52
+00:04:12,890 --> 00:04:15,160
+of the left table is displayed.
+
+53
+00:04:16,650 --> 00:04:23,520
+For instance whenever we have 1 1 0 0 or 22 in the second table only column data from the first table
+
+54
+00:04:23,610 --> 00:04:28,350
+is being recorded in a new table.
+
+55
+00:04:28,360 --> 00:04:33,160
+This means the manager number column information is not taken from E to
+
+56
+00:04:35,780 --> 00:04:38,640
+then the same process is repeated for the other manager.
+
+57
+00:04:38,630 --> 00:04:44,020
+Number 1 1 0 0 THIRTY-NINE fine.
+
+58
+00:04:45,320 --> 00:04:53,460
+What will happen if we change the table in the select statement to eat to logically we will retrieve
+
+59
+00:04:53,460 --> 00:05:01,890
+42 connections again but this time the data displayed will refer solely to table e to and not e one
+
+60
+00:05:03,890 --> 00:05:05,600
+clear.
+
+61
+00:05:05,790 --> 00:05:10,660
+What if you would like to obtain a result containing employee number and apartment number from each
+
+62
+00:05:10,670 --> 00:05:13,960
+one and manager number from E to.
+
+63
+00:05:14,210 --> 00:05:19,630
+To do that you will have to adjust the selection retrieved by the execution of your query.
+
+64
+00:05:19,850 --> 00:05:27,570
+Set the first two columns to be extracted from the left virtual table and the third one from the right.
+
+65
+00:05:27,580 --> 00:05:31,350
+Is this going to work.
+
+66
+00:05:31,390 --> 00:05:32,770
+Of course it will.
+
+67
+00:05:32,800 --> 00:05:34,840
+That's fantastic.
+
+68
+00:05:34,840 --> 00:05:38,000
+Unfortunately we have not solved our problem yet.
+
+69
+00:05:39,960 --> 00:05:42,790
+How can we obtain two rows of data in our result.
+
+70
+00:05:44,150 --> 00:05:46,480
+There are two ways to do that.
+
+71
+00:05:46,490 --> 00:05:53,570
+The first way is simply by using Select Distinct instead of select then applying the same code we used
+
+72
+00:05:53,570 --> 00:05:59,870
+at the beginning of the lecture thus all repeating rows from the first queery will be stacked and we
+
+73
+00:05:59,870 --> 00:06:02,310
+will see only the two desired records.
+
+74
+00:06:04,710 --> 00:06:08,170
+The second way is more sophisticated.
+
+75
+00:06:08,380 --> 00:06:14,090
+We will use the same base query that would lead us to the 42 row output.
+
+76
+00:06:14,300 --> 00:06:18,530
+But this time a WHERE clause will be added
+
+77
+00:06:23,150 --> 00:06:27,830
+and its condition will shorten the length of e two to two rows.
+
+78
+00:06:27,830 --> 00:06:29,870
+Why would we do that.
+
+79
+00:06:29,870 --> 00:06:36,500
+Because this creates a connection of the employee number from each one that isn't with all 42 rows from
+
+80
+00:06:36,500 --> 00:06:39,100
+the manager number column of e to.
+
+81
+00:06:39,230 --> 00:06:41,330
+But with two rows only
+
+82
+00:06:48,610 --> 00:06:50,640
+a ha makes sense.
+
+83
+00:06:53,830 --> 00:06:55,530
+And how do we do that.
+
+84
+00:06:56,550 --> 00:07:02,460
+By using the in operator to state we want the employee number column from the second virtual table to
+
+85
+00:07:02,490 --> 00:07:05,710
+equal any of the manager numbers from the base table.
+
+86
+00:07:06,860 --> 00:07:10,970
+In other words the where sub query regarding this small two row table
+
+87
+00:07:14,460 --> 00:07:15,180
+OK.
+
+88
+00:07:16,410 --> 00:07:16,860
+Good
+
+89
+00:07:20,530 --> 00:07:22,660
+execute the query and
+
+90
+00:07:25,600 --> 00:07:29,650
+perfect the desired output was obtained.
+
+91
+00:07:29,710 --> 00:07:30,480
+Phew.
+
+92
+00:07:30,670 --> 00:07:36,850
+Everything seems so complicated at the beginning but now we saw that using self joins isn't an impossible
+
+93
+00:07:36,850 --> 00:07:38,670
+task is it.
+
+94
+00:07:38,710 --> 00:07:43,180
+Please complete the exercises to strengthen the knowledge you just acquired here.
+
+95
+00:07:43,180 --> 00:07:44,160
+Thank you for watching.
