@@ -1,0 +1,367 @@
+1
+00:00:00,610 --> 00:00:01,490
+Aweary.
+
+2
+00:00:01,700 --> 00:00:02,360
+Right.
+
+3
+00:00:02,610 --> 00:00:10,020
+So some queries can be executed within a select statement or with a FROM clause as well not just with
+
+4
+00:00:10,020 --> 00:00:11,560
+the WHERE clause.
+
+5
+00:00:11,580 --> 00:00:14,710
+This means they can be placed pretty much anywhere in a query.
+
+6
+00:00:14,790 --> 00:00:18,260
+So long as it makes sense to do so.
+
+7
+00:00:18,390 --> 00:00:22,710
+In my opinion you have advanced with as well a lot at this point.
+
+8
+00:00:22,710 --> 00:00:25,120
+Congratulations for that.
+
+9
+00:00:25,170 --> 00:00:29,430
+That's why in this lecture we're not going to keep things simple.
+
+10
+00:00:29,550 --> 00:00:33,800
+We are going to complete a challenging task together based on that.
+
+11
+00:00:33,870 --> 00:00:38,280
+After the video you will face an exercise that is much harder.
+
+12
+00:00:38,310 --> 00:00:43,980
+However it is of paramount importance not just because you will solidify the knowledge gained in this
+
+13
+00:00:43,980 --> 00:00:51,020
+video and as you well in general but we will use its output in our next lecture which is about self
+
+14
+00:00:51,020 --> 00:00:54,210
+joins OK.
+
+15
+00:00:54,210 --> 00:01:04,550
+Having said that let's begin here's the task assigned employee number 1 1 0 0 0 22.
+
+16
+00:01:04,650 --> 00:01:17,420
+As a manager to all employees from 1 0 0 0 1 2 1 0 0 20 or from 1 to 24 brief and Employee Number 1
+
+17
+00:01:17,420 --> 00:01:19,440
+1 0 0 39.
+
+18
+00:01:19,640 --> 00:01:30,120
+As a manager to all employees from 21 to 40 good the result is a mixture of two subsets of results.
+
+19
+00:01:30,130 --> 00:01:32,380
+The first one is subset A.
+
+20
+00:01:32,500 --> 00:01:40,530
+It will be the Group of the first 20 employees associated with manager 1 1 0 0 22.
+
+21
+00:01:40,570 --> 00:01:43,030
+The second one will call subset B.
+
+22
+00:01:43,150 --> 00:01:51,540
+It will contain data about the employees assigned to manager 1 1 0 0 39 the unification between the
+
+23
+00:01:51,540 --> 00:01:57,750
+two subsets will be made through a union and the tables from which we will be extracting data will be
+
+24
+00:01:57,750 --> 00:02:04,050
+employees and department manager.
+
+25
+00:02:04,090 --> 00:02:05,050
+All right.
+
+26
+00:02:05,310 --> 00:02:10,690
+So let's start from the innermost query of the first block.
+
+27
+00:02:10,720 --> 00:02:17,260
+This is the code that would allow us to select the employee with number 1 1 0 0 22 from the department
+
+28
+00:02:17,260 --> 00:02:19,650
+manager table.
+
+29
+00:02:19,660 --> 00:02:27,660
+It is easy to understand now we will add this inner query to the select statement of an outer query.
+
+30
+00:02:29,070 --> 00:02:36,960
+The outcome of this bigger block must be a table with an employee ID department code and a manager ID.
+
+31
+00:02:36,960 --> 00:02:44,220
+In addition all employee IDs will be smaller than 1 0 0 20.
+
+32
+00:02:44,340 --> 00:02:47,010
+Let's type the code we need.
+
+33
+00:02:47,140 --> 00:02:50,380
+We will select the employee number as Employee ID
+
+34
+00:02:55,640 --> 00:03:00,900
+and the minimum value of a department number as department code.
+
+35
+00:03:00,910 --> 00:03:06,560
+We take the minimum value because more than one department could be associated with an employee and
+
+36
+00:03:06,580 --> 00:03:15,640
+by using men we will ensure we place only one value corresponding to an employee number.
+
+37
+00:03:15,820 --> 00:03:20,860
+At this point we'll have to use the sub query of the select statement.
+
+38
+00:03:20,860 --> 00:03:32,020
+As usual we will place the content of the sub query within parentheses and add an alias.
+
+39
+00:03:32,180 --> 00:03:44,060
+By doing this we end the select part of the outer query lovely OK this means we must proceed with from.
+
+40
+00:03:44,120 --> 00:03:46,040
+And the other clauses will need to use
+
+41
+00:03:49,380 --> 00:03:54,740
+you are quite familiar with the structure needed to complete the remaining part of the code so we won't
+
+42
+00:03:54,800 --> 00:03:56,330
+analyze it in detail.
+
+43
+00:04:00,870 --> 00:04:07,020
+Basically what we are doing here is joining the employees in the department manager tables where no
+
+44
+00:04:07,020 --> 00:04:17,000
+employee number is greater than 1 0 0 20.
+
+45
+00:04:17,000 --> 00:04:20,760
+All right let's execute the query.
+
+46
+00:04:22,760 --> 00:04:24,110
+Great.
+
+47
+00:04:24,200 --> 00:04:27,620
+We obtained the 20 row table we wanted.
+
+48
+00:04:27,620 --> 00:04:29,510
+Perfect.
+
+49
+00:04:29,610 --> 00:04:35,900
+We will proceed by inserting this entire code within the from statement of an even outer query.
+
+50
+00:04:36,000 --> 00:04:38,140
+It will be the last level of queering.
+
+51
+00:04:38,250 --> 00:04:43,620
+So we will not go further out if it makes sense to say so in as well terms.
+
+52
+00:04:43,620 --> 00:04:45,710
+This will be a small step.
+
+53
+00:04:45,840 --> 00:04:51,660
+All we have to do is surround the code with parentheses rename it.
+
+54
+00:04:51,690 --> 00:04:58,230
+Subset A and attach it after select everything from A
+
+55
+00:05:02,110 --> 00:05:05,880
+and from.
+
+56
+00:05:05,940 --> 00:05:12,150
+This is how you can use a sub query or an inner query in the From statement of an outer query.
+
+57
+00:05:12,150 --> 00:05:13,900
+Let's see if it works properly
+
+58
+00:05:16,490 --> 00:05:17,920
+yes it does.
+
+59
+00:05:18,900 --> 00:05:23,730
+However the output was in no way different from the one we obtained earlier.
+
+60
+00:05:23,730 --> 00:05:28,160
+That's OK because at this stage we don't need to retrieve additional data.
+
+61
+00:05:28,320 --> 00:05:34,170
+We needed to give a name to this set which will be a subset in the bigger query we will create in a
+
+62
+00:05:34,170 --> 00:05:35,020
+minute.
+
+63
+00:05:35,220 --> 00:05:41,770
+Hence all we did here is create an output called a awesome.
+
+64
+00:05:41,910 --> 00:05:45,540
+Finally we must combine this subset with the other one.
+
+65
+00:05:45,540 --> 00:05:48,290
+We will call be.
+
+66
+00:05:48,460 --> 00:05:54,070
+We all use the same code and then type union.
+
+67
+00:05:54,100 --> 00:05:59,610
+What follows is an identically structured piece of code that will bring subset before us.
+
+68
+00:05:59,680 --> 00:06:02,280
+That's all we will need to accomplish our task.
+
+69
+00:06:02,320 --> 00:06:04,550
+We will not create b separately.
+
+70
+00:06:04,660 --> 00:06:07,390
+Let's first copy and paste what we have for a
+
+71
+00:06:11,750 --> 00:06:12,460
+now.
+
+72
+00:06:12,650 --> 00:06:16,800
+We will edit only the lines that will bring the desired outcome.
+
+73
+00:06:16,820 --> 00:06:20,600
+We said we needed manager 1 1 0 0 39.
+
+74
+00:06:20,600 --> 00:06:25,750
+So we can change the conditional value in the inner most select.
+
+75
+00:06:25,780 --> 00:06:31,080
+Furthermore we would like to have 20 people who are different from the ones provided by subset A.
+
+76
+00:06:31,330 --> 00:06:41,070
+So we will change the where condition to greater than 1 0 0 20 finally because we said these employees
+
+77
+00:06:41,070 --> 00:06:47,570
+must be 20 we can add a limit 20 at the end.
+
+78
+00:06:47,740 --> 00:06:54,730
+And when we rename this entire block to be and add a semi-colon we will be done.
+
+79
+00:06:56,640 --> 00:06:57,620
+Is this true.
+
+80
+00:07:00,100 --> 00:07:01,920
+Absolutely.
+
+81
+00:07:02,110 --> 00:07:06,620
+A task that looks so simple required almost 50 lines of code.
+
+82
+00:07:06,700 --> 00:07:10,750
+Amazing when you are writing queries as long as this one.
+
+83
+00:07:10,840 --> 00:07:13,930
+Please pay particular attention to the indentation.
+
+84
+00:07:14,140 --> 00:07:19,300
+If all rows started from the same horizontal position the code would have been hard to read.
+
+85
+00:07:19,360 --> 00:07:24,960
+That's why it is essential to begin each sub query level with an indent to the right
+
+86
+00:07:28,600 --> 00:07:34,020
+well then I hope you will agree that writing a 50 row query is not that scary.
+
+87
+00:07:34,030 --> 00:07:38,690
+I'm confident that coding step by step you can do that too.
+
+88
+00:07:38,710 --> 00:07:43,840
+Please feel free to rewind this video if necessary and to change the code to obtain similar or different
+
+89
+00:07:43,840 --> 00:07:48,170
+output when you feel you are well acquainted with the topic of sub queries.
+
+90
+00:07:48,220 --> 00:07:50,310
+Move on to the exercise attached.
+
+91
+00:07:50,350 --> 00:07:54,760
+It will be challenging and will deliver the table we need for our next video.
+
+92
+00:07:55,000 --> 00:07:56,080
+Thank you for watching.

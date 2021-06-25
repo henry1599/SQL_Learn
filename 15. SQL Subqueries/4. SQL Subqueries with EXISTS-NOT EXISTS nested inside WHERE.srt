@@ -1,0 +1,171 @@
+1
+00:00:00,990 --> 00:00:07,550
+There is another logical operator we need to introduce as it is related strictly to using some queries.
+
+2
+00:00:07,560 --> 00:00:12,910
+The exists operator checks whether certain row values are found within a sub query.
+
+3
+00:00:13,020 --> 00:00:16,150
+This Jack is conducted row by row.
+
+4
+00:00:16,230 --> 00:00:22,510
+It returns a boolean value if a row value of a sub query exists.
+
+5
+00:00:22,510 --> 00:00:30,200
+The operator returns true and the corresponding record of the outer query is extracted.
+
+6
+00:00:30,350 --> 00:00:38,460
+Otherwise exists returns false and no row value from the outer query is extracted.
+
+7
+00:00:40,180 --> 00:00:41,460
+Here's an example.
+
+8
+00:00:41,560 --> 00:00:47,320
+It will deliver all first and last names of the people in the Employees table who are also found in
+
+9
+00:00:47,320 --> 00:00:55,550
+the department manager table as a matter of fact will create a whole table not just a column as we did
+
+10
+00:00:55,550 --> 00:00:57,140
+with the in operator
+
+11
+00:01:00,600 --> 00:01:04,580
+OK.
+
+12
+00:01:04,740 --> 00:01:06,690
+It contains 24 rows
+
+13
+00:01:09,300 --> 00:01:16,230
+obviously the exits and the operators resemble each other when applied to some queries.
+
+14
+00:01:16,230 --> 00:01:19,470
+Here is the substantial difference between the two.
+
+15
+00:01:19,500 --> 00:01:25,370
+It is noticeable particularly when working on large web mobile or business applications.
+
+16
+00:01:25,410 --> 00:01:28,700
+We're visualizing data quickly is crucial.
+
+17
+00:01:28,830 --> 00:01:39,830
+Exists Tesauro values for existence while in searches among values hence exists is quicker in retrieving
+
+18
+00:01:39,830 --> 00:01:45,540
+large amounts of data while in is faster with smaller data sets.
+
+19
+00:01:45,560 --> 00:01:47,510
+Awesome.
+
+20
+00:01:47,710 --> 00:01:55,170
+Let me make a short side note about using order by in the context of nested queries in my rescue.
+
+21
+00:01:55,170 --> 00:02:01,180
+Well you can order the result list by employee number and insert the order by clause within the sub
+
+22
+00:02:01,210 --> 00:02:03,230
+query.
+
+23
+00:02:03,260 --> 00:02:05,450
+Of course the query will run properly
+
+24
+00:02:08,100 --> 00:02:12,030
+the outer query will simply follow the order of the inner query.
+
+25
+00:02:12,030 --> 00:02:18,080
+However it is more professional to apply order by in the outer query.
+
+26
+00:02:18,800 --> 00:02:25,030
+So please try to get used to leaving this clause in the outer select.
+
+27
+00:02:25,050 --> 00:02:30,720
+It is more acceptable logically to sort the final version of your dataset and not versions preceding
+
+28
+00:02:30,720 --> 00:02:31,830
+the final one.
+
+29
+00:02:32,690 --> 00:02:35,070
+Great.
+
+30
+00:02:35,090 --> 00:02:41,480
+Be aware that some though not all nested queries can be rewritten using joins which are more efficient
+
+31
+00:02:41,480 --> 00:02:42,620
+in general.
+
+32
+00:02:42,650 --> 00:02:47,640
+This is true particularly for inner queries using the WHERE clause.
+
+33
+00:02:47,850 --> 00:02:53,730
+Although sometimes the same answers can be obtained with a join nested queries are considered an essential
+
+34
+00:02:53,730 --> 00:02:58,150
+tool and that's why you must learn them on certain occasions.
+
+35
+00:02:58,170 --> 00:03:03,720
+Sub queries can be bad for performance concerns but here's why people would still need to use them.
+
+36
+00:03:04,080 --> 00:03:07,740
+First they allow for better structuring of the outer query.
+
+37
+00:03:07,770 --> 00:03:15,570
+Thus each inner query can be thought of in isolation and organizing the extraction process can be improved.
+
+38
+00:03:15,600 --> 00:03:22,110
+Hence the name of Eskew well structured query language second.
+
+39
+00:03:22,160 --> 00:03:28,520
+In some situations the use of sub queries is much more intuitive compared to the use of complex joins
+
+40
+00:03:28,600 --> 00:03:31,000
+and unions.
+
+41
+00:03:31,090 --> 00:03:39,670
+Finally many users prefer sub queries simply because they offer enhanced code readability great.
+
+42
+00:03:39,690 --> 00:03:41,000
+This will do for now.
+
+43
+00:03:41,160 --> 00:03:42,210
+Thank you for watching.

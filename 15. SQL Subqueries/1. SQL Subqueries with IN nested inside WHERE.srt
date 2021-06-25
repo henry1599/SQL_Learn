@@ -1,0 +1,199 @@
+1
+00:00:00,730 --> 00:00:07,820
+In this lesson we will see all sub queries can be incorporated within as well queries as their name
+
+2
+00:00:07,820 --> 00:00:13,490
+suggests some queries are queries embedded in a query.
+
+3
+00:00:13,640 --> 00:00:21,310
+They are also called Inner queries or nested queries and they are part of another query called an outer
+
+4
+00:00:21,310 --> 00:00:30,760
+query alternative names for these rescue features our inner select an outer select respectively sub
+
+5
+00:00:30,760 --> 00:00:33,070
+queries can be applied in many ways.
+
+6
+00:00:33,070 --> 00:00:40,590
+Nevertheless the main idea is the same most often a sub query is employed in the WHERE clause of a select
+
+7
+00:00:40,590 --> 00:00:42,200
+statement.
+
+8
+00:00:42,210 --> 00:00:47,750
+Let's see an example as we run this query.
+
+9
+00:00:48,000 --> 00:00:55,280
+We retrieved 24 records which means 24 people currently work in the enterprise as managers.
+
+10
+00:00:55,360 --> 00:01:01,720
+If our database is in perfect condition the same 24 people must be registered in the Employees table
+
+11
+00:01:01,990 --> 00:01:07,080
+where we can find different information about them.
+
+12
+00:01:07,250 --> 00:01:12,550
+So I assume you are interested in obtaining the names of all employees working within the enterprise
+
+13
+00:01:12,580 --> 00:01:13,990
+as managers.
+
+14
+00:01:13,990 --> 00:01:21,380
+Keep in mind that names can be found only in the Employees table not in the department manager table.
+
+15
+00:01:21,410 --> 00:01:24,880
+There are a few ways you could obtain the design the desired result.
+
+16
+00:01:24,890 --> 00:01:30,170
+We will try the one involving the use of sub queries as it will allow us to extract the required information
+
+17
+00:01:30,170 --> 00:01:31,470
+from the first table.
+
+18
+00:01:31,670 --> 00:01:35,870
+So long as the same employees have been registered in the department manager table
+
+19
+00:01:38,560 --> 00:01:40,730
+let's check the relevant syntax.
+
+20
+00:01:43,640 --> 00:01:49,250
+We select the first and last name from the Employees table for the same employee numbers that can be
+
+21
+00:01:49,250 --> 00:01:53,070
+found in the department manager table.
+
+22
+00:01:53,130 --> 00:01:59,610
+The last condition has been set through the where clause in the in operator which you already know how
+
+23
+00:01:59,610 --> 00:02:00,440
+to use.
+
+24
+00:02:00,630 --> 00:02:06,870
+It will list all employee numbers recorded in the department manager table.
+
+25
+00:02:07,110 --> 00:02:13,680
+After we execute this query we will be able to verify the data about all 24 managers has been stored
+
+26
+00:02:13,680 --> 00:02:18,970
+in the Employees table as well great.
+
+27
+00:02:19,010 --> 00:02:21,290
+Let's analyze this example.
+
+28
+00:02:21,290 --> 00:02:29,420
+First the outer query is the entire code starting from select first name last name and so on until the
+
+29
+00:02:29,480 --> 00:02:30,460
+in operator
+
+30
+00:02:33,430 --> 00:02:38,620
+the sub query or the inner query that is nested within the outer query.
+
+31
+00:02:38,650 --> 00:02:40,380
+Is this little bit here.
+
+32
+00:02:42,400 --> 00:02:46,630
+Remember a sub query should always be placed within parentheses.
+
+33
+00:02:48,570 --> 00:02:51,980
+In this case we should make no exception to this rule as well.
+
+34
+00:02:54,420 --> 00:03:01,910
+From a processing point of view the fuel engine starts by running the inner query that it uses its return
+
+35
+00:03:01,940 --> 00:03:07,860
+output which is intermediate to execute the outer query.
+
+36
+00:03:07,960 --> 00:03:15,310
+In general a sub query may return a single value a scalar a single row a single column or an entire
+
+37
+00:03:15,310 --> 00:03:16,700
+table.
+
+38
+00:03:16,750 --> 00:03:23,060
+In our case it delivers the entire employee number column from the department manager table.
+
+39
+00:03:24,830 --> 00:03:31,590
+Actually to prove this is the case we could run the sub query as a standalone query
+
+40
+00:03:40,390 --> 00:03:42,760
+after we execute this bit of code.
+
+41
+00:03:44,480 --> 00:03:47,560
+We obtain the employee number column the way we should have
+
+42
+00:03:50,960 --> 00:03:56,590
+fantastic although we will not dive into tasks that are too complex.
+
+43
+00:03:56,590 --> 00:04:01,580
+Please remember you can have a lot more than one sub query in your outer query.
+
+44
+00:04:01,600 --> 00:04:07,810
+It is possible to nest in her queries within other inner queries thus allowing your analysis to achieve
+
+45
+00:04:07,810 --> 00:04:10,380
+significant depth.
+
+46
+00:04:10,410 --> 00:04:17,280
+In that case the Cuil engine would execute the innermost query first and then each subsequent query
+
+47
+00:04:17,400 --> 00:04:19,460
+until it runs the outermost query.
+
+48
+00:04:19,500 --> 00:04:27,030
+Last Stay tuned for the next video in which we will see another example of a query containing a sub
+
+49
+00:04:27,030 --> 00:04:29,300
+query that will do for now.
+
+50
+00:04:29,460 --> 00:04:30,450
+Thank you for watching.

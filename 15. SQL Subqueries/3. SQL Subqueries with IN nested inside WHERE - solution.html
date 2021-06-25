@@ -1,0 +1,41 @@
+<p><strong>SELECT</strong></p>
+
+<p><strong>&nbsp;&nbsp;&nbsp; *
+
+  </strong></p>
+
+<p><strong>FROM
+
+  </strong></p>
+
+<p><strong>&nbsp;&nbsp;&nbsp; dept_manager
+
+  </strong></p>
+
+<p><strong>WHERE
+
+  </strong></p>
+
+<p><strong>&nbsp;&nbsp;&nbsp; emp_no IN (SELECT 
+
+  </strong></p>
+
+<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; emp_no
+
+  </strong></p>
+
+<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FROM
+
+  </strong></p>
+
+<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; employees
+
+  </strong></p>
+
+<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WHERE
+
+  </strong></p>
+
+<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hire_date BETWEEN '1990-01-01' AND '1995-01-01');</strong>
+
+</p>

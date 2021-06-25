@@ -1,0 +1,45 @@
+<p><strong>SELECT</strong></p>
+
+<p><strong>&nbsp;&nbsp;&nbsp; *
+
+  </strong></p>
+
+<p><strong>FROM
+
+  </strong></p>
+
+<p><strong>&nbsp;&nbsp;&nbsp; employees e
+
+  </strong></p>
+
+<p><strong>WHERE
+
+  </strong></p>
+
+<p><strong>&nbsp;&nbsp;&nbsp; EXISTS( SELECT 
+
+  </strong></p>
+
+<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+
+  </strong></p>
+
+<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FROM
+
+  </strong></p>
+
+<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; titles t
+
+  </strong></p>
+
+<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WHERE
+
+  </strong></p>
+
+<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t.emp_no = e.emp_no
+
+  </strong></p>
+
+<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AND title = 'Assistant Engineer');</strong>
+
+</p>
