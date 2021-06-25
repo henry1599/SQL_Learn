@@ -1,0 +1,25 @@
+<p><strong>CREATE OR REPLACE VIEW v_manager_avg_salary AS</strong></p>
+
+<p><strong>&nbsp;&nbsp;&nbsp; SELECT 
+
+  </strong></p>
+
+<p><strong>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ROUND(AVG(salary), 2)
+
+  </strong></p>
+
+<p><strong>&nbsp;&nbsp;&nbsp; FROM
+
+  </strong></p>
+
+<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; salaries s
+
+  </strong></p>
+
+<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JOIN
+
+  </strong></p>
+
+<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dept_manager m ON s.emp_no = m.emp_no;</strong>
+
+</p>
