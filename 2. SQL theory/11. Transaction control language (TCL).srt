@@ -1,0 +1,199 @@
+0
+1
+00:00:00,870 --> 00:00:06,280
+When working in real-life, not every change you make to a database is saved automatically;
+1
+
+2
+00:00:06,330 --> 00:00:08,480
+you have to say you wish that to happen.
+2
+
+3
+00:00:09,210 --> 00:00:12,530
+The statement to use in such cases is COMMIT.
+3
+
+4
+00:00:12,650 --> 00:00:18,450
+It works only for changes made with the help of the INSERT, DELETE, or UPDATE clauses. COMMIT will save
+4
+
+5
+00:00:18,470 --> 00:00:23,390
+the changes you've made permanently on the database and will let other users have access to the modified
+5
+
+6
+00:00:23,390 --> 00:00:24,800
+version of the database.
+6
+
+7
+00:00:25,590 --> 00:00:29,670
+For instance imagine you have updated a record in the "customers" table.
+7
+
+8
+00:00:29,670 --> 00:00:36,830
+Say you wish to change the last name of the fourth customer from Winnfield to Johnson.
+8
+
+9
+00:00:36,900 --> 00:00:43,410
+If you are an administrator, you can do that with the help of the UPDATE clause, and you will see "Johnson"
+9
+
+10
+00:00:43,410 --> 00:00:49,710
+appear in the place of "Winnfield". The UPDATE statement we saw earlier would allow you to change the last
+10
+
+11
+00:00:49,710 --> 00:00:51,580
+name of the fourth customer.
+11
+
+12
+00:00:51,640 --> 00:00:54,510
+However, your work isn't done just yet.
+12
+
+13
+00:00:54,780 --> 00:01:00,600
+The rest of the users working with the database system cannot see you have made any changes. To complete
+13
+
+14
+00:01:00,630 --> 00:01:01,940
+the entire process,
+14
+
+15
+00:01:01,950 --> 00:01:06,750
+you must add a COMMIT statement at the end of the UPDATE block.
+15
+
+16
+00:01:06,890 --> 00:01:10,930
+Only then will the updated information be available to all users -
+16
+
+17
+00:01:10,970 --> 00:01:16,760
+they will see Catherine Johnson, not Catherine Winnfield, as customer number 4 in the "Customers" table.
+17
+
+18
+00:01:18,920 --> 00:01:20,590
+Committed States can accrue.
+18
+
+19
+00:01:20,810 --> 00:01:25,690
+If you are a database administrator, you might need to use COMMIT 20 times per day.
+19
+
+20
+00:01:25,790 --> 00:01:30,830
+The Transaction Control Language clause that will let you make a step back and restore the database
+20
+
+21
+00:01:30,830 --> 00:01:33,590
+to the last committed state is ROLLBACK.
+21
+
+22
+00:01:33,590 --> 00:01:40,000
+This allows you to undo any changes you have made but don't want to be saved permanently. To apply this
+22
+
+23
+00:01:40,000 --> 00:01:41,970
+command, type ROLLBACK;
+23
+
+24
+00:01:43,490 --> 00:01:49,010
+Be careful when using this statement, because it will revert to the last committed state, and all the changes
+24
+
+25
+00:01:49,010 --> 00:01:51,490
+made in the meantime will be removed.
+25
+
+26
+00:01:52,210 --> 00:01:56,670
+There can be multiple statements executed, and they will all be undone.
+26
+
+27
+00:01:57,070 --> 00:02:00,540
+To recap, COMMIT saves the transaction in the database;
+27
+
+28
+00:02:00,640 --> 00:02:05,670
+once issued, the changes are saved permanently, and they cannot be undone.
+28
+
+29
+00:02:05,680 --> 00:02:12,260
+ROLLBACK allows you to take a step back, and the last change, or changes, you've made, will not count. 
+29
+
+30
+00:02:12,280 --> 00:02:15,240
+ROLLBACK reverts to the last non-committed state.
+30
+
+31
+00:02:15,340 --> 00:02:21,040
+If you wonder why we went through the syntax in relative detail, you can think of the following explanation.
+31
+
+32
+00:02:21,070 --> 00:02:28,510
+The DDL, DML, DCL, and TCL statements are for separate parts of the SQL syntax that represent what
+32
+
+33
+00:02:28,510 --> 00:02:34,390
+the language can be used for: creation and manipulation of data, assignment and removal of permissions
+33
+
+34
+00:02:34,390 --> 00:02:39,130
+to use this data, and saving and restoring changes to a database.
+34
+
+35
+00:02:39,130 --> 00:02:45,250
+These lectures served well to give you a good overall technical idea of why SQL is used widely across
+35
+
+36
+00:02:45,250 --> 00:02:48,130
+companies and institutions around the world.
+36
+
+37
+00:02:48,460 --> 00:02:53,500
+In the next section, we will learn more about database theory and will ensure that, by the end of this
+37
+
+38
+00:02:53,500 --> 00:02:59,290
+course, you will have the solid practical and theoretical knowledge that allows you to work proficiently
+38
+
+39
+00:02:59,300 --> 00:03:00,730
+in SQL.
+39
+
+40
+00:03:00,730 --> 00:03:01,630
+Thanks for watching!

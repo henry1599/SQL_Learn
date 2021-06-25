@@ -1,0 +1,144 @@
+0
+1
+00:00:00,810 --> 00:00:05,910
+Now that you know what a relational database is and have an idea about how it works, it is much easier
+1
+
+2
+00:00:05,910 --> 00:00:11,490
+to understand how SQL fits in the whole picture. SQL is the programming language you need
+2
+
+3
+00:00:11,490 --> 00:00:16,520
+to execute commands that let you create and manipulate a relational database.
+3
+
+4
+00:00:16,560 --> 00:00:21,540
+We will not delve into strict and detailed technical definitions to explain how it works.
+4
+
+5
+00:00:21,690 --> 00:00:27,810
+What you need to know is there are a few types of programming out there - procedural (imperative), object-
+5
+
+6
+00:00:27,810 --> 00:00:34,420
+oriented, declarative, and functional. Although with some procedural elements, SQL is mainly regarded
+6
+
+7
+00:00:34,470 --> 00:00:38,610
+as a declarative programming language, it is non procedural.
+7
+
+8
+00:00:38,610 --> 00:00:43,190
+This means while coding you will not be interested in how you want the job done.
+8
+
+9
+00:00:43,230 --> 00:00:46,190
+The focus is on what results you want to obtain.
+9
+
+10
+00:00:47,360 --> 00:00:50,560
+An abstract example would best clarify what we mean here.
+10
+
+11
+00:00:50,750 --> 00:00:56,810
+When using a procedural language, such as C or Java, you must explicitly divide the solution of a certain
+11
+
+12
+00:00:56,810 --> 00:00:58,990
+problem into several steps.
+12
+
+13
+00:00:59,000 --> 00:01:07,540
+For instance: 1. Please open the door. 2. Go outside 3.
+13
+
+14
+00:01:07,730 --> 00:01:08,390
+Take the bucket.
+14
+
+15
+00:01:08,390 --> 00:01:12,510
+I forgot there. 4. Bring it back to me.
+15
+
+16
+00:01:13,660 --> 00:01:16,760
+In a declarative language, this would sound like:
+16
+
+17
+00:01:16,900 --> 00:01:18,280
+1. Fetch the bucket, please.
+17
+
+18
+00:01:18,400 --> 00:01:21,830
+And you wouldn't have to go through the process step by step.
+18
+
+19
+00:01:21,850 --> 00:01:27,460
+The algorithms are built-in, and there is an optimizer, which will separate your task into smaller steps
+19
+
+20
+00:01:27,550 --> 00:01:29,930
+and do the magic to bring the desired output.
+20
+
+21
+00:01:30,920 --> 00:01:34,390
+Why is this important? When using SQL,
+21
+
+22
+00:01:34,490 --> 00:01:38,370
+you should concentrate on what you want to retrieve from your databases.
+22
+
+23
+00:01:38,690 --> 00:01:44,110
+Unless you are an advanced user, don't bother with the algorithms explaining how your data can be obtained.
+23
+
+24
+00:01:44,120 --> 00:01:48,180
+Acknowledging SQL is principally a declarative language,
+24
+
+25
+00:01:48,180 --> 00:01:51,570
+now we can go through the main components of its syntax.
+25
+
+26
+00:01:51,840 --> 00:01:59,610
+It comprises a Data Definition Language (known as DDL), a data manipulation language (abbreviated DML), a data
+26
+
+27
+00:01:59,610 --> 00:02:05,280
+control language (DCL), and a transaction control language (TCL).
+27
+
+28
+00:02:05,460 --> 00:02:08,230
+These will be the topics of our next few videos.
+28
+
+29
+00:02:08,460 --> 00:02:09,530
+Thank you for watching!

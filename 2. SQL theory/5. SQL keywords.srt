@@ -1,0 +1,90 @@
+0
+1
+00:00:00,720 --> 00:00:04,250
+Let's stop for a quick side note. ADD is a keyword,
+1
+
+2
+00:00:04,410 --> 00:00:10,250
+and so are CREATE and ALTER. For instance, keywords in SQL cannot be variable names.
+2
+
+3
+00:00:10,260 --> 00:00:16,200
+Think of them as words that constitute the language. The software you are using will understand which
+3
+
+4
+00:00:16,200 --> 00:00:18,800
+commands and operations you wish to carry out,
+4
+
+5
+00:00:18,900 --> 00:00:24,900
+namely through these words. To avoid any confusion for the software, objects or databases cannot have
+5
+
+6
+00:00:24,900 --> 00:00:29,010
+names that coincide with SQL keywords. To exemplify,
+6
+
+7
+00:00:29,010 --> 00:00:32,760
+think of all one-word statements like CREATE an ALTER.
+7
+
+8
+00:00:32,910 --> 00:00:36,690
+They are keywords. So, you can't call your table "alter",
+8
+
+9
+00:00:36,750 --> 00:00:42,180
+since this is a name that can trigger a certain process -
+the modification of the content of a designated
+9
+
+10
+00:00:42,180 --> 00:00:43,110
+table.
+10
+
+11
+00:00:43,530 --> 00:00:49,860
+So, back to our example, ADD is the keyword that will add a column, called "Date of Purchase", in the "Sales"
+11
+
+12
+00:00:49,860 --> 00:00:50,750
+table.
+12
+
+13
+00:00:50,760 --> 00:00:55,780
+It is one of the keywords frequently used with the ALTER statement.
+13
+
+14
+00:00:55,800 --> 00:00:59,770
+Finally, don't get confused if you hear the term reserved words.
+14
+
+15
+00:00:59,820 --> 00:01:04,130
+It is a synonym for keywords, which indicates precisely what we explained;
+15
+
+16
+00:01:04,290 --> 00:01:07,650
+these words cannot be used when naming objects.
+16
+
+17
+00:01:07,650 --> 00:01:10,340
+Ok. So that's about it for keywords.
+17
+
+18
+00:01:10,350 --> 00:01:11,420
+Thank you for watching!

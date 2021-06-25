@@ -1,0 +1,307 @@
+0
+1
+00:00:01,200 --> 00:00:07,440
+The Data Definition and the Data Manipulation languages are probably the ones you will use more often.
+1
+
+2
+00:00:07,440 --> 00:00:10,130
+The following two lectures are rather informative.
+2
+
+3
+00:00:10,380 --> 00:00:13,580
+Some terms we will use will not be used later in the course;
+3
+
+4
+00:00:13,590 --> 00:00:19,110
+however, please pay attention as they will widen your view about the activity domain of SQL.
+4
+
+5
+00:00:19,680 --> 00:00:25,230
+The Data Control Language is a syntax containing only two statements - GRANT and REVOKE.
+5
+
+6
+00:00:25,470 --> 00:00:31,230
+As you probably guessed, these statements allow us to manage the rights users have in a database.
+6
+
+7
+00:00:31,230 --> 00:00:37,130
+The thing is a database is typically used by tens or hundreds sometimes even thousands of people,
+7
+
+8
+00:00:37,500 --> 00:00:43,070
+all members of the institution, organization, or company to which the database belongs.
+8
+
+9
+00:00:43,080 --> 00:00:48,930
+These people are called users, and they don't necessarily have the same rights of access to the information
+9
+
+10
+00:00:48,930 --> 00:00:50,220
+in the database.
+10
+
+11
+00:00:50,220 --> 00:00:53,650
+This is where GRANT and REVOKE come into play.
+11
+
+12
+00:00:53,670 --> 00:00:58,170
+GRANT gives (or grants) certain permissions to users.
+12
+
+13
+00:00:58,170 --> 00:01:01,230
+The syntax to comply with is the following...
+13
+
+14
+00:01:01,230 --> 00:01:06,600
+Now, let's do an element wise breakdown of the structure. With this syntax,
+14
+
+15
+00:01:06,600 --> 00:01:12,690
+one can grant a specific type of permission, like complete or partial access to the resources from a
+15
+
+16
+00:01:12,690 --> 00:01:15,670
+designated table from a certain database.
+16
+
+17
+00:01:15,690 --> 00:01:20,400
+These rights will be assigned to a person who has a user name registered at the local server that MySQL
+17
+
+18
+00:01:20,400 --> 00:01:26,520
+has provided with the Workbench. The server is based on our machine and it's commonly known
+18
+
+19
+00:01:26,520 --> 00:01:35,310
+as "localhost", which is the domain name for the local IP address of our machine 127.0.0.1.
+19
+
+20
+00:01:35,640 --> 00:01:41,880
+Naturally, big companies and corporations don't use this type of server and their databases lay on external,
+20
+
+21
+00:01:42,000 --> 00:01:46,620
+much more powerful servers specifically designed to store big amounts of data.
+21
+
+22
+00:01:46,620 --> 00:01:51,600
+Those servers are not our "localhost" and are accessible on different IP addresses.
+22
+
+23
+00:01:51,600 --> 00:01:57,240
+To illustrate this activity, granting privileges, we will show you how usernames are usually created in SQL.
+23
+
+24
+00:01:57,450 --> 00:02:02,250
+Then, we will grant certain rights to a user.
+24
+
+25
+00:02:02,270 --> 00:02:07,510
+Don't worry if it looks unfamiliar. In a few lectures, we will explain in more detail how the MySQL
+25
+
+26
+00:02:07,540 --> 00:02:10,780
+Workbench functions. By typing this,
+26
+
+27
+00:02:10,850 --> 00:02:13,450
+we will create a user 'frank' with password 'pass'.
+27
+
+28
+00:02:13,460 --> 00:02:20,550
+Say we'd like to allow frank to have access to certain resources in our database, like the table
+28
+
+29
+00:02:20,550 --> 00:02:23,830
+containing customers data.
+29
+
+30
+00:02:23,910 --> 00:02:29,400
+Then, this line of code will allow frank to apply nothing but the SELECT statement to the "Customers"
+30
+
+31
+00:02:29,400 --> 00:02:32,110
+table from our database.
+31
+
+32
+00:02:32,190 --> 00:02:40,980
+He won't be able to use DROP, TRUNCATE, ALTER, INSERT, DELETE, or any other command - just SELECT. It will be
+32
+
+33
+00:02:40,980 --> 00:02:45,030
+the only manipulation he could carry out. To prove this,
+33
+
+34
+00:02:45,030 --> 00:02:46,710
+let's look at the screen.
+34
+
+35
+00:02:46,770 --> 00:02:50,660
+This is the workbench that opens when Frank logs in from his profile.
+35
+
+36
+00:02:50,670 --> 00:02:57,360
+What is important here is that, as expected, Frank can only see the "customers" table in the "sales"
+database.
+36
+
+37
+00:02:57,450 --> 00:03:04,640
+He can't get to the "sales" or the "items" table. For instance, if we try to apply the ALTER statement and
+37
+
+38
+00:03:04,640 --> 00:03:11,960
+the ADD clause, we would obtain an error. When we attempt to run a select command,
+38
+
+39
+00:03:11,990 --> 00:03:16,970
+the output of the operation will appear immediately, and we will get a sign that the command has been
+39
+
+40
+00:03:16,970 --> 00:03:24,410
+successfully executed. This code here will allow frank to have complete access to all the tables of the
+40
+
+41
+00:03:24,410 --> 00:03:30,950
+"sales" database, as indicated by the star symbol. Frank can carry out many more operations, including the
+41
+
+42
+00:03:30,950 --> 00:03:38,810
+ones you already know of: CREATE, DROP, TRUNCATE, SELECT, INSERT, ALTER, and so on. After this code has been
+42
+
+43
+00:03:38,810 --> 00:03:39,360
+run,
+43
+
+44
+00:03:39,410 --> 00:03:45,200
+we can open Frank's profile and see more tables have been shown in the "sales" database, not just the "customers"
+44
+
+45
+00:03:45,200 --> 00:03:53,320
+table. The ALTER statement will work too, not just the SELECT statement.
+45
+
+46
+00:03:53,430 --> 00:04:02,200
+The rest of the DDL and DML statements are available too. Great! 
+People who have complete rights to a database.
+46
+
+47
+00:04:02,220 --> 00:04:04,030
+are database administrators.
+47
+
+48
+00:04:04,350 --> 00:04:10,680
+They can grant access to users and can revoke it. The REVOKE clause is used to revoke permissions and
+48
+
+49
+00:04:10,680 --> 00:04:12,880
+privileges of database users.
+49
+
+50
+00:04:12,900 --> 00:04:15,990
+It is the exact opposite of the GRANT statement.
+50
+
+51
+00:04:15,990 --> 00:04:18,010
+The syntax is identical.
+51
+
+52
+00:04:18,210 --> 00:04:25,630
+Instead of granting permission TO somebody, one can revoke a privilege FROM somebody. The example we saw
+52
+
+53
+00:04:25,630 --> 00:04:31,090
+a minute ago could grant the user Frank the privilege to apply the SELECT clause to the "customers" table
+53
+
+54
+00:04:31,120 --> 00:04:34,600
+from the "sales" database. To revoke the same permission,
+54
+
+55
+00:04:34,600 --> 00:04:42,410
+we should type the following: REVOKE SELECT ON "sales" dot "customers" FROM frank, within quotes, at localhost,
+55
+
+56
+00:04:42,550 --> 00:04:49,830
+within single quotes. We can revoke from Frank the permission to apply the SELECT command in the 
+"customers"
+56
+
+57
+00:04:49,830 --> 00:04:50,590
+table.
+57
+
+58
+00:04:50,670 --> 00:04:54,820
+He cannot use SELECT on this table any more.
+58
+
+59
+00:04:54,840 --> 00:04:59,120
+There is one final part of the syntax we would like to introduce to you.
+59
+
+60
+00:04:59,130 --> 00:05:01,500
+We will do this in our next video.
+60
+
+61
+00:05:01,500 --> 00:05:02,420
+Thanks for watching!

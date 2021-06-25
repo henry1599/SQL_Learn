@@ -1,0 +1,274 @@
+0
+1
+00:00:00,850 --> 00:00:05,610
+All right! Good! Let's go over the components of SQL's syntax.
+1
+
+2
+00:00:05,720 --> 00:00:11,480
+It comprises several types of statements that allow you to perform various commands and operations.
+2
+
+3
+00:00:11,480 --> 00:00:14,670
+The Data Definition Language, DDL, is one type.
+3
+
+4
+00:00:14,770 --> 00:00:20,090
+It is called a language but you can think of it as a syntax, a set of statements that allow the user
+4
+
+5
+00:00:20,090 --> 00:00:27,350
+to define or modify data structures in objects such as tables. One DDL statement is the CREATE statement.
+5
+
+6
+00:00:27,830 --> 00:00:34,040
+As its name suggests, it is used for creating entire databases and database objects as tables.
+6
+
+7
+00:00:34,040 --> 00:00:41,600
+For example, if we want to create a table, we must abide by the following syntax: CREATE TABLE, object name,
+7
+
+8
+00:00:41,900 --> 00:00:49,580
+column name, and data type in parentheses and semi-column. As expected, the CREATE statement creates
+8
+
+9
+00:00:49,580 --> 00:00:51,660
+an object with a certain name.
+9
+
+10
+00:00:51,680 --> 00:00:57,650
+In this case, we are creating a table. Given we have to assign columns to the table, after specifying the
+10
+
+11
+00:00:57,650 --> 00:00:59,450
+table name within parentheses,
+11
+
+12
+00:00:59,510 --> 00:01:05,300
+we must also indicate the names of the columns and the type of data contained in each column.
+12
+
+13
+00:01:05,300 --> 00:01:08,280
+Look at this example. With this line of code,
+13
+
+14
+00:01:08,330 --> 00:01:14,840
+you can create a table with the name "Sales", containing one column, called "purchase number", that will store
+14
+
+15
+00:01:14,930 --> 00:01:16,880
+only integer values.
+15
+
+16
+00:01:16,880 --> 00:01:18,380
+Easy, right?
+16
+
+17
+00:01:19,290 --> 00:01:23,350
+Don't worry if the table name coincides with the name we've assigned to the database.
+17
+
+18
+00:01:23,370 --> 00:01:26,240
+This is a common practice. On one hand,
+18
+
+19
+00:01:26,280 --> 00:01:30,250
+the syntax will make it clearer when you refer to the database and to the table.
+19
+
+20
+00:01:30,360 --> 00:01:36,620
+On the other hand, it is logical it makes sense for a database to bear the same name as its main table.
+20
+
+21
+00:01:36,940 --> 00:01:38,730
+Ok. Great!
+21
+
+22
+00:01:38,790 --> 00:01:42,720
+Observe how simple the syntax of the CREATE statement is - 
+22
+
+23
+00:01:42,720 --> 00:01:47,100
+you will have to write it at the beginning of the line and then directly point out the type and name
+23
+
+24
+00:01:47,100 --> 00:01:48,630
+of the object.
+24
+
+25
+00:01:48,660 --> 00:01:49,940
+Awesome!
+25
+
+26
+00:01:50,100 --> 00:01:54,870
+And why did we start with an example where we created a table and not some other object?
+26
+
+27
+00:01:55,170 --> 00:02:00,570
+Because it helps us understand better how the ALTER statement works which is the operation to be carried
+27
+
+28
+00:02:00,570 --> 00:02:03,160
+out when altering existing objects.
+28
+
+29
+00:02:03,270 --> 00:02:09,240
+For example, we can use ALTER to modify a table by adding, removing, or renaming one of the columns in
+29
+
+30
+00:02:09,240 --> 00:02:12,750
+the table. To add a column, called "date of purchase",
+30
+
+31
+00:02:12,750 --> 00:02:17,920
+you should begin with the same structure as the one used for the CREATE statement. After ALTER,
+31
+
+32
+00:02:17,940 --> 00:02:21,330
+You will be able to designate the object type and its name.
+32
+
+33
+00:02:21,330 --> 00:02:25,710
+After that you are supposed to write down the precise modification.
+33
+
+34
+00:02:25,710 --> 00:02:30,020
+This means a new column containing the date of the purchase will be added to our table.
+34
+
+35
+00:02:30,030 --> 00:02:36,060
+In addition, the values in this column will be of the DATE type. Intuitive, right?
+35
+
+36
+00:02:36,480 --> 00:02:39,120
+What if you want to delete a database object?
+36
+
+37
+00:02:39,300 --> 00:02:42,930
+In that case, you can use the DROP statement to do that.
+37
+
+38
+00:02:43,200 --> 00:02:48,060
+For instance, we can delete the entire "Customers" table with a single line of code:
+38
+
+39
+00:02:48,360 --> 00:02:55,840
+DROP TABLE "Customers". As you can see, the DDL statement was accompanied by the object type and its name.
+39
+
+40
+00:02:56,010 --> 00:03:02,400
+Another valuable tool when using the Data Definition Language is RENAME. This piece of syntax allows
+40
+
+41
+00:03:02,400 --> 00:03:05,550
+you to rename an object like a database table.
+41
+
+42
+00:03:05,550 --> 00:03:11,910
+If we hadn't dropped that "Customers" table, RENAME TABLE "Customers" to "Customer Data" would have changed
+42
+
+43
+00:03:11,910 --> 00:03:16,920
+the name of the table to "Customer Data". Ok!
+43
+
+44
+00:03:17,210 --> 00:03:22,850
+Finally, instead of deleting an entire table through DROP, we can also remove its data and continue to
+44
+
+45
+00:03:22,850 --> 00:03:25,310
+have the table as an object in the database.
+45
+
+46
+00:03:25,550 --> 00:03:30,740
+In such a situation, TRUNCATE is the DDL statement that would allow us to do that.
+46
+
+47
+00:03:31,160 --> 00:03:37,010
+After executing this clause, all the records from the "Customers" table will be deleted but, although empty,
+47
+
+48
+00:03:37,220 --> 00:03:41,530
+the table will continue to exist. As a quick recap of this lesson,
+48
+
+49
+00:03:41,540 --> 00:03:47,810
+remember the Data Definition Language constitutes the part of the SQL syntax that allows you to create, alter,
+49
+
+50
+00:03:47,870 --> 00:03:52,000
+drop, rename, and truncate databases and their elements.
+50
+
+51
+00:03:52,070 --> 00:03:57,020
+Once you have created a database with its elements and have loaded it with information, you are ready
+51
+
+52
+00:03:57,020 --> 00:04:03,050
+to step up to the next level and manipulate the data to obtain various statistics or other tables that
+52
+
+53
+00:04:03,050 --> 00:04:06,240
+will help you solve your business analytical problems.
+53
+
+54
+00:04:06,290 --> 00:04:11,750
+To do this, you will have to get acquainted with the syntax of the Data Manipulation Language.
+54
+
+55
+00:04:11,750 --> 00:04:12,590
+Stay tuned.

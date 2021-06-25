@@ -1,0 +1,299 @@
+0
+1
+00:00:00,990 --> 00:00:08,640
+Now that we know more about DDL and some of its arguments, we are ready to focus on DML, the Data Manipulation
+1
+
+2
+00:00:08,640 --> 00:00:14,460
+Language. In particular, we will learn about some statements that allow us to manipulate the data in the
+2
+
+3
+00:00:14,460 --> 00:00:16,350
+tables of a database.
+3
+
+4
+00:00:16,350 --> 00:00:25,090
+We will start with SELECT, a statement used to retrieve data from database objects, like tables.
+4
+
+5
+00:00:25,230 --> 00:00:30,720
+The star after the select statement in the following line will deliver the entire content of the "sales"
+5
+
+6
+00:00:30,720 --> 00:00:36,160
+table, meaning all records and fields contained in the table.
+6
+
+7
+00:00:36,350 --> 00:00:43,820
+You can use the same structure to extract specific records from the table but at this point one could
+7
+
+8
+00:00:43,820 --> 00:00:49,210
+rightly ask: What for? - We can see the entire table here.
+8
+
+9
+00:00:49,280 --> 00:00:51,650
+Why are we going to need just a piece of it?
+9
+
+10
+00:00:52,040 --> 00:00:55,680
+Well imagine a table with two million rows of data.
+10
+
+11
+00:00:55,790 --> 00:00:58,550
+You can only see a small part of it on the screen,
+11
+
+12
+00:00:58,700 --> 00:00:59,630
+right?
+12
+
+13
+00:00:59,660 --> 00:01:04,760
+This is why it can be helpful if you could extract only a portion of the table that satisfies given
+13
+
+14
+00:01:04,760 --> 00:01:06,260
+criteria.
+14
+
+15
+00:01:06,260 --> 00:01:12,800
+This is crucial and is one of the most powerful tools available in SQL. You should know how to
+15
+
+16
+00:01:12,800 --> 00:01:17,570
+use SELECT perfectly well, so you designate the precise area of the table
+16
+
+17
+00:01:17,600 --> 00:01:22,160
+you would like to extract information from with ease. In this course,
+17
+
+18
+00:01:22,160 --> 00:01:25,140
+Many lessons in exercises include this statement.
+18
+
+19
+00:01:25,190 --> 00:01:32,930
+So, by the end, you will feel confident when using it and selecting a certain part of a database.
+19
+
+20
+00:01:32,990 --> 00:01:35,550
+INSERT is used to insert data into tables.
+20
+
+21
+00:01:35,570 --> 00:01:40,110
+It enables you to add more records or rows while you are working with the table.
+21
+
+22
+00:01:40,160 --> 00:01:44,750
+This clause goes hand in hand with the keywords INTO and VALUES.
+22
+
+23
+00:01:47,680 --> 00:01:50,220
+In the parentheses, after the table name,
+23
+
+24
+00:01:50,350 --> 00:01:53,950
+you will have to specify the columns you are adding information to,
+24
+
+25
+00:01:54,040 --> 00:01:56,470
+unless you want to insert data in all columns.
+25
+
+26
+00:01:59,330 --> 00:02:03,550
+For the moment, our "Sales" table contains only two fields,
+26
+
+27
+00:02:03,590 --> 00:02:09,620
+so if we want to add purchase number and date values, we could omit the part with column names in parentheses,
+27
+
+28
+00:02:09,770 --> 00:02:14,550
+and our statement would look like this:
+28
+
+29
+00:02:14,580 --> 00:02:21,630
+The two versions are identical. Syntactically, such statement makes sense, because it allows you to insert
+29
+
+30
+00:02:21,630 --> 00:02:23,940
+values right into a table.
+30
+
+31
+00:02:23,940 --> 00:02:27,950
+This line of code allows you to register the first record of the dataset.
+31
+
+32
+00:02:28,080 --> 00:02:30,970
+It will appear as the first row of the cells table.
+32
+
+33
+00:02:32,590 --> 00:02:39,680
+This code will add another record - purchase number 2 and the date 27th of October 2017.
+33
+
+34
+00:02:41,480 --> 00:02:43,810
+Amazing! So far,
+34
+
+35
+00:02:43,910 --> 00:02:48,160
+we saw how to select and insert information in SQL. Remember,
+35
+
+36
+00:02:48,200 --> 00:02:53,680
+you can also update information. UPDATE allows you to renew existing data of your tables.
+36
+
+37
+00:02:53,810 --> 00:02:57,950
+Its syntax is slightly different and is best understood with an example.
+37
+
+38
+00:03:00,580 --> 00:03:06,820
+This piece of code will allow us to substitute the previously inserted date of purchase number 1,
+38
+
+39
+00:03:06,850 --> 00:03:10,950
+11th of October 2017, with the ones specified here,
+39
+
+40
+00:03:11,080 --> 00:03:14,050
+12th of December 2017.
+40
+
+41
+00:03:14,050 --> 00:03:18,400
+And how do we get to this date the 11th of October?
+41
+
+42
+00:03:18,460 --> 00:03:26,110
+The update is based on the number of the purchase -  purchase number 1. This way, the entire row is updated,
+42
+
+43
+00:03:26,380 --> 00:03:29,820
+and the date will be 12th of December 2017.
+43
+
+44
+00:03:31,830 --> 00:03:36,290
+There is one additional DML clause I would like to show you in this lesson.
+44
+
+45
+00:03:36,290 --> 00:03:42,660
+It is DELETE. It function similarly to the TRUNCATE statement from the Data Definition Language with
+45
+
+46
+00:03:42,660 --> 00:03:44,600
+one substantial difference.
+46
+
+47
+00:03:44,610 --> 00:03:49,580
+TRUNCATE allows us to remove all the records contained in a table; with DELETE,
+47
+
+48
+00:03:49,620 --> 00:03:55,160
+you can specify precisely what you would like to be removed.
+48
+
+49
+00:03:55,320 --> 00:04:02,010
+For instance, the following phrase will remove all the records from the "sales" table just as if we had
+49
+
+50
+00:04:02,010 --> 00:04:04,340
+written TRUNCATE TABLE sales;
+50
+
+51
+00:04:06,240 --> 00:04:12,390
+If we take advantage of the optional WHERE clause, instead, the following statement will delete the record
+51
+
+52
+00:04:12,390 --> 00:04:18,020
+with a purchased number of one, and the other one we have in our miniature table will be left intact.
+52
+
+53
+00:04:18,060 --> 00:04:20,930
+Our table will remain only with the second record - 
+53
+
+54
+00:04:21,060 --> 00:04:28,200
+The one with purchase number two and date of purchase 27th of October 2017.
+54
+
+55
+00:04:28,290 --> 00:04:34,250
+To summarize, the Data Manipulation Language syntax is composed mainly of the following four elements
+55
+
+56
+00:04:34,260 --> 00:04:36,250
+containing statements and keywords:
+56
+
+57
+00:04:36,270 --> 00:04:37,920
+SELECT... FROM...,
+57
+
+58
+00:04:37,920 --> 00:04:49,650
+INSERT INTO... VALUES..., UPDATE SET... WHERE..., and DELETE... FROM... and optionally WHERE. In our next video, we'll learn
+58
+
+59
+00:04:49,650 --> 00:04:54,430
+what part of SQL's syntax is referred to as Data Control Language.
+59
+
+60
+00:04:54,450 --> 00:04:54,930
+Thank you!
