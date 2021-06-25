@@ -1,0 +1,223 @@
+1
+00:00:02,260 --> 00:00:07,870
+Duplicate records also known as duplicate rows are identical rows and then Eskew will table.
+
+2
+00:00:08,230 --> 00:00:13,770
+This means for a pair of duplicate records the values in each column coincide.
+
+3
+00:00:14,940 --> 00:00:19,880
+Generally duplicate rows are not always allowed in a database or a data table.
+
+4
+00:00:20,280 --> 00:00:25,000
+The regular practice of many companies is to clean their data from such occurrences.
+
+5
+00:00:25,170 --> 00:00:32,270
+However they are sometimes encountered especially in new raw or uncontrolled data.
+
+6
+00:00:32,430 --> 00:00:36,170
+In this lesson we will show you a way to handle them in your queries.
+
+7
+00:00:36,390 --> 00:00:41,270
+As a matter of fact our data is clean does not have any duplicate rows.
+
+8
+00:00:41,490 --> 00:00:46,560
+Therefore we can insert one row in the department manager duplicate table that is identical with one
+
+9
+00:00:46,560 --> 00:00:47,950
+of the others.
+
+10
+00:00:48,150 --> 00:00:58,770
+Employee Number 1 1 0 2 2 8 department number 3 worked on the 21st of March 1992 and with a contract
+
+11
+00:00:58,770 --> 00:01:00,180
+with an indefinite end.
+
+12
+00:01:00,180 --> 00:01:07,180
+Apparently that's why the last value will be 9 9 9 9 0 0 1 0 1.
+
+13
+00:01:07,190 --> 00:01:07,880
+All right.
+
+14
+00:01:09,930 --> 00:01:13,290
+We will also create a duplicate row in the other table.
+
+15
+00:01:13,290 --> 00:01:19,300
+Let it be the ninth Department customer service great.
+
+16
+00:01:19,550 --> 00:01:21,590
+Let's check what happened with the two tables.
+
+17
+00:01:21,590 --> 00:01:22,020
+First
+
+18
+00:01:25,100 --> 00:01:29,810
+the table with the data about the managers is the same as we saw it in the previous two lectures with
+
+19
+00:01:29,810 --> 00:01:38,470
+the sole difference the employee numbered 1 1 0 2 2 8 appears there twice and how about the department's
+
+20
+00:01:38,470 --> 00:01:43,060
+duplicate table.
+
+21
+00:01:43,220 --> 00:01:45,490
+We find it in the same way we did before.
+
+22
+00:01:45,500 --> 00:01:50,660
+The only difference is that the customer service department is shown twice fine.
+
+23
+00:01:51,820 --> 00:01:53,300
+The situation is clear.
+
+24
+00:01:54,560 --> 00:01:57,330
+Now look at this picture.
+
+25
+00:01:57,430 --> 00:02:00,310
+It is a snipped photo of the output of 20 rows.
+
+26
+00:02:00,460 --> 00:02:07,040
+When the initial state of the two tables was used without duplicates How do you expect the new output
+
+27
+00:02:07,040 --> 00:02:09,760
+to change regarding the one from the picture.
+
+28
+00:02:09,830 --> 00:02:15,010
+Do you think the number of presented rows will be smaller equal or greater.
+
+29
+00:02:15,020 --> 00:02:21,010
+Let's check the output of the same query this time with the two tables containing duplicate records.
+
+30
+00:02:23,750 --> 00:02:25,930
+We obtain 25 rows.
+
+31
+00:02:25,940 --> 00:02:29,090
+What do you think these additional five rows came from.
+
+32
+00:02:29,450 --> 00:02:35,570
+First we don't have just one but two employees with number 1 1 0 2 2 8.
+
+33
+00:02:36,050 --> 00:02:40,970
+Hence 2 times the department name Human Resources is appended against them.
+
+34
+00:02:42,320 --> 00:02:50,340
+This gives us a single additional record compared with what we had earlier.
+
+35
+00:02:50,460 --> 00:02:57,650
+The remaining four extra records are at the end of this resultset the department duplicate table contains
+
+36
+00:02:57,650 --> 00:03:03,420
+a duplicate row for department number nine customer service.
+
+37
+00:03:03,450 --> 00:03:08,790
+That's why every time Department number nine from the first table is matched with department nine from
+
+38
+00:03:08,790 --> 00:03:11,760
+the second table two records are displayed.
+
+39
+00:03:14,010 --> 00:03:14,900
+That's true.
+
+40
+00:03:17,270 --> 00:03:19,700
+You can see each of these employees twice.
+
+41
+00:03:19,700 --> 00:03:31,210
+1 1 1 7 8 4 8 7 7 9 3 9 and 6 9 2 awesome whether having duplicate values is a mistake in the database
+
+42
+00:03:31,330 --> 00:03:34,870
+or you just don't want to see duplicate rows and query results.
+
+43
+00:03:34,870 --> 00:03:36,750
+Here is how to handle duplicates.
+
+44
+00:03:38,080 --> 00:03:43,610
+Grouped by the field that differs most among records in our case.
+
+45
+00:03:43,680 --> 00:03:45,870
+This will be the employee number column.
+
+46
+00:03:45,870 --> 00:03:50,990
+This will stack all rows that have the same employee number.
+
+47
+00:03:51,030 --> 00:03:54,770
+Will this return the initial output with no duplicate values.
+
+48
+00:03:58,080 --> 00:03:59,230
+Absolutely.
+
+49
+00:03:59,430 --> 00:04:00,480
+20 rows.
+
+50
+00:04:00,480 --> 00:04:01,580
+Perfect.
+
+51
+00:04:01,620 --> 00:04:04,130
+This is an important tool in your arsenal.
+
+52
+00:04:04,380 --> 00:04:09,450
+You cannot allow yourself to assume there are no duplicate rows in your data especially if it contains
+
+53
+00:04:09,450 --> 00:04:15,360
+millions of rows it would be good to get used to grouping the joins by the field that differs most among
+
+54
+00:04:15,360 --> 00:04:16,230
+records.
+
+55
+00:04:17,200 --> 00:04:19,080
+I hope you enjoyed watching this video.
+
+56
+00:04:19,090 --> 00:04:20,880
+See you in the next one.

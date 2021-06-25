@@ -1,0 +1,191 @@
+1
+00:00:00,590 --> 00:00:06,080
+Is a teacher at the beginning of the course we talked about the advantage of using relational databases.
+
+2
+00:00:06,080 --> 00:00:12,800
+Remember we worked on an example with the sales database where we explain how applying relational algebra
+
+3
+00:00:12,800 --> 00:00:19,120
+techniques to fields with identical type of information into tables can speed up retrieving data.
+
+4
+00:00:19,190 --> 00:00:21,440
+You didn't forget this right.
+
+5
+00:00:22,670 --> 00:00:29,900
+Well ladies and gentlemen this is a turning point in our Eskew Well journey in the lessons to come.
+
+6
+00:00:29,950 --> 00:00:37,310
+You will learn how relating Eskew will tables works in practice joins are the Cuil tools that allow
+
+7
+00:00:37,310 --> 00:00:40,510
+us to construct a relationship between objects.
+
+8
+00:00:42,000 --> 00:00:47,060
+Think about strategies that would allow us to link some of the tables in our employees data.
+
+9
+00:00:47,400 --> 00:00:54,300
+How can we know what information can be retrieved from the different tables and what should be the criteria
+
+10
+00:00:54,420 --> 00:01:01,110
+according to which we will create a relationship between two tables relational schemas are the perfect
+
+11
+00:01:01,110 --> 00:01:04,780
+tool that will help you find a strategy for linking tables.
+
+12
+00:01:05,040 --> 00:01:09,820
+Let's examine the representation of the employees database in specific.
+
+13
+00:01:09,870 --> 00:01:15,260
+We'll focus on the employees and the department employee tables.
+
+14
+00:01:15,390 --> 00:01:21,530
+Technically a join shows a result set containing fields derived from two or more tables.
+
+15
+00:01:22,230 --> 00:01:28,590
+So we can use a join to relate the employees and the department employee table then extract information
+
+16
+00:01:29,490 --> 00:01:36,750
+like employee number first and last name from the Employees table and department number and start date
+
+17
+00:01:36,750 --> 00:01:41,980
+of the labor contract from the department employee table.
+
+18
+00:01:42,000 --> 00:01:45,410
+The idea of using joins is twofold.
+
+19
+00:01:45,420 --> 00:01:52,900
+First we must find a related column from the two tables that contains the same type of data in our case.
+
+20
+00:01:52,910 --> 00:01:55,790
+This can be the employee number column.
+
+21
+00:01:55,790 --> 00:02:00,050
+This technique would then allow us to extract information from the two tables.
+
+22
+00:02:00,050 --> 00:02:04,740
+Under certain conditions based on the employee number column.
+
+23
+00:02:04,980 --> 00:02:12,020
+Second we will be free to add columns from these two tables to our output in our example.
+
+24
+00:02:12,060 --> 00:02:16,470
+We could obtain the fields we just mentioned employee number and name
+
+25
+00:02:19,140 --> 00:02:22,020
+department number and start contract date
+
+26
+00:02:24,660 --> 00:02:30,070
+great in the next video we'll show you how the JOIN syntax works.
+
+27
+00:02:30,070 --> 00:02:36,790
+Before that while still at this stage thinking about a strategy for retrieving data from different tables
+
+28
+00:02:37,030 --> 00:02:40,180
+please be very careful about the following.
+
+29
+00:02:42,200 --> 00:02:49,520
+The columns you use to relate tables must represent the same object such as ID but the tables you are
+
+30
+00:02:49,520 --> 00:02:56,980
+considering need not be logically adjacent in the relational schema an example of two logically adjacent
+
+31
+00:02:56,980 --> 00:02:57,620
+tables.
+
+32
+00:02:57,700 --> 00:03:00,580
+Are the employees and apartment manager tables
+
+33
+00:03:03,220 --> 00:03:06,260
+and the employees and titles tables.
+
+34
+00:03:08,750 --> 00:03:14,070
+The department manager table and the department employee table are not logically adjacent.
+
+35
+00:03:16,730 --> 00:03:23,840
+This means they can be joined to and you won't have to indicate the relationship that goes through the
+
+36
+00:03:23,840 --> 00:03:26,420
+Employees table and the employee number key
+
+37
+00:03:30,560 --> 00:03:33,180
+or through departments and the department number key.
+
+38
+00:03:33,220 --> 00:03:34,010
+Specifically
+
+39
+00:03:38,850 --> 00:03:43,710
+what is important is you have found a related column connecting the two tables.
+
+40
+00:03:45,140 --> 00:03:49,110
+Awesome in the videos that follow.
+
+41
+00:03:49,110 --> 00:03:52,820
+We will show you the most notable types of joins in my rescue.
+
+42
+00:03:52,870 --> 00:03:54,400
+Well to do this.
+
+43
+00:03:54,450 --> 00:04:01,700
+We will use two duplicate tables you have graded one of them the department's duplicate in the exercise.
+
+44
+00:04:01,700 --> 00:04:07,490
+After this lecture you will modify it and you will create a new table that will be a duplicate of the
+
+45
+00:04:07,490 --> 00:04:13,820
+department managers table hence assumed this exercise is a refresher on the Data Definition Language
+
+46
+00:04:13,820 --> 00:04:18,180
+part of the school syntax in our next lesson.
+
+47
+00:04:18,220 --> 00:04:20,960
+We will start with inner joins.
+
+48
+00:04:21,430 --> 00:04:22,440
+Thank you for watching.

@@ -1,0 +1,23 @@
+<p><strong>SELECT</strong></p><p><strong>    e.emp_no,
+
+  </strong></p><p><strong>    e.first_name,
+
+  </strong></p><p><strong>    e.last_name,
+
+  </strong></p><p><strong>    dm.dept_no,
+
+  </strong></p><p><strong>    dm.from_date
+
+  </strong></p><p><strong>FROM
+
+  </strong></p><p><strong>    employees e
+
+  </strong></p><p><strong>        LEFT JOIN    </strong></p><p><strong>    </strong></p><p><strong>dept_manager dm ON e.emp_no = dm.emp_no
+
+  </strong></p><p><strong>WHERE
+
+  </strong></p><p><strong>    e.last_name = 'Markovitch'
+
+  </strong></p><p><strong>ORDER BY dm.dept_no DESC, e.emp_no;</strong>
+
+</p>

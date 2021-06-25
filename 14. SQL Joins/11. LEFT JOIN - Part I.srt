@@ -1,0 +1,235 @@
+1
+00:00:00,950 --> 00:00:05,420
+We spent significant time introducing joins in the inner join type.
+
+2
+00:00:05,420 --> 00:00:11,030
+The benefit of doing this extensive introduction was that now you can quickly understand and learn other
+
+3
+00:00:11,030 --> 00:00:18,610
+types of Eskew Well joins the Venn diagram you see here allows you to visualize how the left join works.
+
+4
+00:00:18,650 --> 00:00:24,740
+Its output allows us to see all records from the table on the left side of the join including all matching
+
+5
+00:00:24,740 --> 00:00:26,380
+rows of the two tables.
+
+6
+00:00:28,290 --> 00:00:34,770
+That's why compared to the inner join the resultset colored in red include the rest of the area the
+
+7
+00:00:34,770 --> 00:00:44,020
+left table in su l terms this translates in retrieving all matching values of the two tables plus all
+
+8
+00:00:44,020 --> 00:00:48,120
+values from the left table that matched no values from the right table.
+
+9
+00:00:49,470 --> 00:00:50,960
+To clarify this concept.
+
+10
+00:00:51,090 --> 00:00:57,630
+Let's see an application first let's remove the duplicates from the two tables.
+
+11
+00:00:57,640 --> 00:01:02,140
+This would allow us to explain the types of Joines we will introduce in the next few lessons better
+
+12
+00:01:03,230 --> 00:01:08,660
+duplicate values and flatter output with repeating records and do not contribute to the results we obtain
+
+13
+00:01:08,660 --> 00:01:10,040
+meaningfully.
+
+14
+00:01:10,040 --> 00:01:15,770
+That is why we decided to complete the section about Joines without them practicing with duplicates
+
+15
+00:01:15,770 --> 00:01:18,770
+will be left as part of the exercises in this section.
+
+16
+00:01:18,950 --> 00:01:23,730
+So don't worry you will deal with them while proceeding with their course.
+
+17
+00:01:23,810 --> 00:01:29,240
+All right technically after deleting the rows in which we see the respective employee and department
+
+18
+00:01:29,240 --> 00:01:34,400
+numbers might ask well will delete all initial records and all their duplicates.
+
+19
+00:01:34,400 --> 00:01:38,410
+So to proceed we must add back the initial records.
+
+20
+00:01:38,420 --> 00:01:40,820
+Please don't forget to do that
+
+21
+00:01:46,110 --> 00:01:46,800
+ha.
+
+22
+00:01:47,130 --> 00:01:49,640
+Ok everything looks good now.
+
+23
+00:01:50,170 --> 00:01:52,930
+So do you know what else we can do.
+
+24
+00:01:52,930 --> 00:01:57,160
+We can load the same code we used in the previous exercise.
+
+25
+00:01:57,340 --> 00:02:00,560
+The joints and tax will be subject to a slight change though.
+
+26
+00:02:00,730 --> 00:02:06,820
+Instead of relating the two tables to the keyword join or inner join we must type left join
+
+27
+00:02:10,030 --> 00:02:13,270
+OK that's all that needs to be modified in the code.
+
+28
+00:02:13,450 --> 00:02:16,570
+Let's see what will happen when we execute this query.
+
+29
+00:02:19,060 --> 00:02:26,500
+It returned 26 rows 6 rows more than the 20 rows we obtain in the example about inner joints which are
+
+30
+00:02:26,500 --> 00:02:28,900
+the 6 rows that make the difference.
+
+31
+00:02:28,900 --> 00:02:32,320
+Let's check this out to start our analysis.
+
+32
+00:02:32,320 --> 00:02:34,970
+Please refer to the Venn diagram.
+
+33
+00:02:35,020 --> 00:02:41,080
+These six records represent the area filled with blue.
+
+34
+00:02:41,100 --> 00:02:45,010
+This is the part of the Left set where no values match with the right table.
+
+35
+00:02:46,520 --> 00:02:47,630
+Technically speaking.
+
+36
+00:02:47,720 --> 00:02:52,380
+Luckily all six records of interest are in the top part of the output.
+
+37
+00:02:52,520 --> 00:02:57,710
+First all four records that appear in the manager's table but are not seen in the department's table
+
+38
+00:02:57,890 --> 00:02:59,140
+have been retrieved.
+
+39
+00:03:00,570 --> 00:03:08,040
+They referred to employees with numbers 9 9 9 9 0 4 5 6 and 7.
+
+40
+00:03:08,070 --> 00:03:14,460
+Why are these four rows retrieved because they were registered in the table on the left but not in the
+
+41
+00:03:14,460 --> 00:03:15,900
+table on the right.
+
+42
+00:03:16,020 --> 00:03:21,240
+There are no department number values that can match these records with the table on the right since
+
+43
+00:03:21,390 --> 00:03:24,940
+they are an example of non-matching values from the left table.
+
+44
+00:03:25,970 --> 00:03:28,040
+Right.
+
+45
+00:03:28,080 --> 00:03:33,750
+There are two more records we must discuss the ones of department two from the left table department
+
+46
+00:03:33,750 --> 00:03:35,450
+manager duplicate.
+
+47
+00:03:35,490 --> 00:03:37,920
+They appear in the left join output.
+
+48
+00:03:38,160 --> 00:03:42,380
+If you remember there are no such records in the department's duplicate table.
+
+49
+00:03:42,540 --> 00:03:42,950
+Right
+
+50
+00:03:45,690 --> 00:03:53,430
+there we had information for departments 1 3 4 5 and so on until 11 and nothing about department to
+
+51
+00:03:55,260 --> 00:03:57,990
+the two records appear in the final left join list.
+
+52
+00:03:58,120 --> 00:04:03,130
+But there were no corresponding values for the department name field that can come from the table on
+
+53
+00:04:03,130 --> 00:04:06,250
+the right perfect.
+
+54
+00:04:06,300 --> 00:04:12,090
+Basically this is proof that differently from what we saw for inner joins when working with left joins
+
+55
+00:04:12,300 --> 00:04:15,360
+the order in which you join tables matters.
+
+56
+00:04:15,570 --> 00:04:23,820
+Having the managers table M or the departments table D on the left can change results completely in
+
+57
+00:04:23,820 --> 00:04:24,750
+the next video.
+
+58
+00:04:24,750 --> 00:04:29,280
+We'll provide an example of what happens when we switch the order of the two tables.
+
+59
+00:04:29,280 --> 00:04:30,280
+Thank you for watching.
