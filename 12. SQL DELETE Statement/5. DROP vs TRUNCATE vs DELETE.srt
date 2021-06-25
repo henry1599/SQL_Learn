@@ -1,0 +1,159 @@
+1
+00:00:00,490 --> 00:00:07,860
+In this video we will briefly discuss the main difference between three reserved words drop truncate
+
+2
+00:00:08,010 --> 00:00:11,910
+and delete their functionality is similar.
+
+3
+00:00:12,000 --> 00:00:17,070
+And you might wonder why all of them and not just one exist.
+
+4
+00:00:17,070 --> 00:00:21,200
+Look at this hypothetical table with 10 records.
+
+5
+00:00:21,310 --> 00:00:24,220
+If you drop it you will lose the records.
+
+6
+00:00:24,220 --> 00:00:30,280
+The table has a structure and all related objects like indexes and constraints.
+
+7
+00:00:30,370 --> 00:00:33,790
+You will lose everything.
+
+8
+00:00:33,830 --> 00:00:39,850
+Furthermore you won't be able to roll back to its initial state or to the last commit statement.
+
+9
+00:00:40,010 --> 00:00:42,950
+Once you drop a table it's gone.
+
+10
+00:00:42,950 --> 00:00:46,790
+Only additional data recovery software will help in such a situation.
+
+11
+00:00:46,910 --> 00:00:50,690
+But it is not considered a standard eschewing tool.
+
+12
+00:00:50,690 --> 00:00:59,540
+Hence use drop table only when you're sure you aren't going to use the table in question any more truncate
+
+13
+00:00:59,630 --> 00:01:05,120
+is a statement that will essentially remove all records from the table just as if you had to use delete
+
+14
+00:01:05,210 --> 00:01:07,690
+without a WHERE clause.
+
+15
+00:01:07,700 --> 00:01:14,000
+This means truncate will remove all records in your table but its structure will remain intact.
+
+16
+00:01:15,110 --> 00:01:22,940
+Please bear in mind that when truncating auto increment values will be reset so if your table is 10
+
+17
+00:01:22,940 --> 00:01:30,410
+record records and then you truncate it when you start refilling this data object with information the
+
+18
+00:01:30,410 --> 00:01:34,940
+next records that will be inserted are not going to be 11 and 12.
+
+19
+00:01:35,000 --> 00:01:38,940
+The first record will be number one.
+
+20
+00:01:39,120 --> 00:01:43,660
+The second record will be number two thirds will and so on
+
+21
+00:01:46,650 --> 00:01:55,610
+nice finally delete removes records row by row only the rows corresponding to a certain condition or
+
+22
+00:01:55,610 --> 00:02:00,110
+conditions specified in the WHERE clause will be deleted.
+
+23
+00:02:00,350 --> 00:02:07,600
+If the where block is omitted the output will resemble the one obtained with truncate.
+
+24
+00:02:07,630 --> 00:02:11,160
+There will be a couple of significant distinctions though.
+
+25
+00:02:11,200 --> 00:02:17,620
+First the optimizer will implement different program Maddock approaches when we are using truncate or
+
+26
+00:02:17,620 --> 00:02:19,630
+delete as a result.
+
+27
+00:02:19,630 --> 00:02:25,060
+Truncate delivers the output much quicker than delete because it does not need to remove information
+
+28
+00:02:25,240 --> 00:02:26,410
+row by row.
+
+29
+00:02:29,720 --> 00:02:34,590
+Second autoincrement values are not reset with delete.
+
+30
+00:02:34,810 --> 00:02:43,050
+So if you delete all 10 records in this table and then start inserting new data the first new record
+
+31
+00:02:43,050 --> 00:02:45,910
+will be numbered 11 and not one.
+
+32
+00:02:46,050 --> 00:02:50,250
+The second will be 12 and not 2 and so on.
+
+33
+00:02:50,280 --> 00:02:56,670
+There are many other technical peculiarities regarding these three options but their detailed explanation
+
+34
+00:02:56,760 --> 00:02:59,370
+is beyond the scope of this course.
+
+35
+00:02:59,380 --> 00:03:05,130
+Nevertheless we hope this short lecture will help you make a more educated choice among drop truncate
+
+36
+00:03:05,280 --> 00:03:10,520
+and delete don't skip the exercises attached to this lecture.
+
+37
+00:03:10,680 --> 00:03:17,730
+Then fasten your seatbelts as the next set of lectures is about the Cuil functions.
+
+38
+00:03:17,730 --> 00:03:19,550
+Are you excited.
+
+39
+00:03:19,560 --> 00:03:20,330
+Good.
+
+40
+00:03:20,640 --> 00:03:22,410
+Let's dive right in.

@@ -1,0 +1,215 @@
+1
+00:00:00,980 --> 00:00:06,770
+Up to now we have learned how to insert and update data in our tables in this section.
+
+2
+00:00:06,860 --> 00:00:10,310
+We will focus on removing records from a database.
+
+3
+00:00:10,310 --> 00:00:17,740
+This operation is carried out with the delete statement following what we said in the previous section
+
+4
+00:00:17,740 --> 00:00:19,450
+regarding commit and rollback.
+
+5
+00:00:19,540 --> 00:00:23,170
+And knowing that in this lecture we are bound to delete items.
+
+6
+00:00:23,170 --> 00:00:30,820
+We will start by executing a commit thus we will store the current state of our database if necessary
+
+7
+00:00:31,030 --> 00:00:35,530
+we will be able to revert to it later using rollback.
+
+8
+00:00:35,670 --> 00:00:36,480
+Right.
+
+9
+00:00:36,480 --> 00:00:45,200
+So in the lectures about insert and in the exercises attached to it under employee number 9 9 9 9 0
+
+10
+00:00:45,210 --> 00:00:48,830
+3 you added some information about Jonathan Creek.
+
+11
+00:00:49,050 --> 00:00:52,150
+Let's select his record in the Employees table.
+
+12
+00:00:54,120 --> 00:00:54,760
+Fine.
+
+13
+00:00:55,080 --> 00:00:58,940
+We can see his birth date Jinder and hire date.
+
+14
+00:00:59,250 --> 00:01:00,550
+OK.
+
+15
+00:01:00,690 --> 00:01:06,430
+Now let's see what information is contained about the same employee in the titles table
+
+16
+00:01:10,260 --> 00:01:18,570
+excellent his job position is senior engineer and he started working on the first of October 1997.
+
+17
+00:01:18,680 --> 00:01:25,060
+The lack of information in the to date column suggests that he is still working at the company good
+
+18
+00:01:26,470 --> 00:01:32,650
+as we mentioned at the beginning of the course the syntax to abide by when deleting information is delete
+
+19
+00:01:32,650 --> 00:01:41,750
+from table name and where with a corresponding condition in our case the code would be delete from employees
+
+20
+00:01:42,470 --> 00:01:48,740
+where employee number is 9 9 9 9 0 3.
+
+21
+00:01:48,830 --> 00:01:55,970
+What should happen when we run this query is that only the row with Employee Number 9 9 9 9 0 3 will
+
+22
+00:01:55,970 --> 00:01:56,940
+be removed.
+
+23
+00:01:58,280 --> 00:01:59,880
+Let's see if this is true.
+
+24
+00:01:59,930 --> 00:02:08,020
+After executing this delete statement then selecting the record from the Employees table providing the
+
+25
+00:02:08,020 --> 00:02:10,850
+same condition in the WHERE clause.
+
+26
+00:02:10,960 --> 00:02:18,270
+So what output will show up to an empty record.
+
+27
+00:02:18,270 --> 00:02:22,360
+This means we have properly deleted the information about Jonathan Creek.
+
+28
+00:02:22,480 --> 00:02:23,830
+Awesome.
+
+29
+00:02:23,860 --> 00:02:24,820
+What do you think.
+
+30
+00:02:24,820 --> 00:02:30,050
+Can we still see he was a senior engineer hired in October 1997.
+
+31
+00:02:30,130 --> 00:02:32,800
+We'll have to check what's left in the titles table
+
+32
+00:02:36,100 --> 00:02:38,860
+I'm empty as well.
+
+33
+00:02:38,930 --> 00:02:44,920
+Why didn't we order delete command for only the Employees table.
+
+34
+00:02:44,920 --> 00:02:48,920
+The answer lies in the connection between the two tables.
+
+35
+00:02:48,980 --> 00:02:55,670
+When we checked the DDL information about the titles table we see in the foreign key constraint that
+
+36
+00:02:55,670 --> 00:03:01,390
+we also have an on daily cascade clause in our earlier lecture.
+
+37
+00:03:01,390 --> 00:03:07,240
+We explained the meaning of this clause using it means all related records in the child table will be
+
+38
+00:03:07,240 --> 00:03:08,850
+deleted as well.
+
+39
+00:03:08,860 --> 00:03:10,350
+Fantastic.
+
+40
+00:03:12,790 --> 00:03:17,990
+For the sake of exercise assume we deleted Jonathan's information by mistake.
+
+41
+00:03:18,040 --> 00:03:23,650
+Is there a way we can go back considering that we apply to commit statement at the beginning of the
+
+42
+00:03:23,650 --> 00:03:24,920
+lecture then.
+
+43
+00:03:24,970 --> 00:03:26,680
+Yes there is.
+
+44
+00:03:26,680 --> 00:03:31,070
+We should be able to run a rollback command let's execute it
+
+45
+00:03:33,930 --> 00:03:34,680
+OK.
+
+46
+00:03:35,380 --> 00:03:39,360
+And now let's verify that the record has been put back in the table.
+
+47
+00:03:42,970 --> 00:03:45,160
+It's in the Employees table.
+
+48
+00:03:45,550 --> 00:03:46,430
+OK.
+
+49
+00:03:46,760 --> 00:03:47,170
+And
+
+50
+00:03:50,760 --> 00:03:55,310
+we have it entitles to perfect.
+
+51
+00:03:55,340 --> 00:03:59,780
+So our last comment did a good job preserving the full data set.
+
+52
+00:03:59,870 --> 00:04:06,810
+The initial large data set along with the three records we added in the insert section keep up the pace
+
+53
+00:04:06,810 --> 00:04:12,260
+for the next video in which we'll show you something with which you must be very careful.
+
+54
+00:04:12,480 --> 00:04:13,690
+Thank you for watching.

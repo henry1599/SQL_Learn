@@ -1,0 +1,199 @@
+1
+00:00:00,770 --> 00:00:07,610
+Welcome to another chapter of this course so far you have spent a significant amount of time studying
+
+2
+00:00:07,630 --> 00:00:13,880
+as well the last few sections introduced you to the language is practical application in which data
+
+3
+00:00:13,880 --> 00:00:16,480
+manipulation was our core focus.
+
+4
+00:00:17,400 --> 00:00:20,820
+It's time to take a step forward in the next lectures.
+
+5
+00:00:20,820 --> 00:00:24,860
+You will be dealing with aggregate functions what are they.
+
+6
+00:00:24,870 --> 00:00:27,720
+We already introduced them in the select section.
+
+7
+00:00:27,720 --> 00:00:33,480
+Their name derives from the fact that they gather data from many rows of a table then aggregate it into
+
+8
+00:00:33,480 --> 00:00:36,970
+a single value as we explained earlier.
+
+9
+00:00:36,980 --> 00:00:43,700
+This means the information contained in multiple rows will be the input of these functions and the single
+
+10
+00:00:43,700 --> 00:00:47,890
+value they provide is the respective output.
+
+11
+00:00:47,890 --> 00:00:54,610
+There are other aggregate functions besides count those that are used most often are some min max and
+
+12
+00:00:54,610 --> 00:00:57,510
+average abbreviated avy.
+
+13
+00:00:57,730 --> 00:01:02,520
+This is because of their ability to return a single value from an entire column.
+
+14
+00:01:02,530 --> 00:01:08,210
+Another way to refer to aggregate functions is as summarizing functions.
+
+15
+00:01:08,390 --> 00:01:10,510
+Why do these functions exist.
+
+16
+00:01:11,230 --> 00:01:16,360
+They are responsible to the information requirements of a companys different organizational levels.
+
+17
+00:01:17,350 --> 00:01:23,540
+A businesses top management executives are typically interested in summarized figures and rarely in
+
+18
+00:01:23,540 --> 00:01:24,050
+detail.
+
+19
+00:01:24,050 --> 00:01:30,580
+Data in such situations aggregate functions are the perfect solution.
+
+20
+00:01:30,600 --> 00:01:35,700
+Let's focus on the salary table instead of checking the DDL statement.
+
+21
+00:01:35,760 --> 00:01:42,390
+We can use select to extract a brief 10 row output that will show us that in this table we have information
+
+22
+00:01:42,390 --> 00:01:47,400
+about employee numbers salaries and starting and ending dates of employment.
+
+23
+00:01:47,400 --> 00:01:53,710
+Great we can use the Count function to count the number of salaries contracts in this data table.
+
+24
+00:01:53,730 --> 00:02:00,060
+Please remember that the name of the column salary acts as an argument of the Count function by running
+
+25
+00:02:00,060 --> 00:02:07,350
+the query will take approximately 967 thousand records.
+
+26
+00:02:07,690 --> 00:02:15,830
+OK remember that count is applicable to both numeric and non-numeric data.
+
+27
+00:02:15,880 --> 00:02:21,790
+If your boss would like to know how many employees start dates are in the database you can use count
+
+28
+00:02:21,880 --> 00:02:26,750
+from date and obtain the result.
+
+29
+00:02:26,820 --> 00:02:29,760
+By the way why do we have the same number.
+
+30
+00:02:29,880 --> 00:02:35,750
+Because the length of both columns is the same and we don't have missing data in either of them.
+
+31
+00:02:35,760 --> 00:02:37,700
+Great.
+
+32
+00:02:37,730 --> 00:02:40,430
+Finally we talked about count distinct.
+
+33
+00:02:40,580 --> 00:02:46,550
+Remember this addition helps us find the number of times unique values are encountered in a given column.
+
+34
+00:02:47,850 --> 00:02:56,080
+Therefore count distinct from date will deliver the answer to the question your boss asked
+
+35
+00:02:58,610 --> 00:03:03,560
+contracts have been signed on six thousand three hundred and ninety two different dates.
+
+36
+00:03:04,490 --> 00:03:09,160
+Now's the right time to introduce another interesting feature on the count function.
+
+37
+00:03:09,170 --> 00:03:14,300
+Earlier we mentioned that aggregate functions typically ignore null values throughout the field to which
+
+38
+00:03:14,300 --> 00:03:15,710
+they are applied.
+
+39
+00:03:15,710 --> 00:03:22,310
+Actually this can happen only if you have indicated a specific column name within the parentheses.
+
+40
+00:03:22,310 --> 00:03:28,010
+The alternative option you can choose is typing the star wildcard character not preceding it by the
+
+41
+00:03:28,010 --> 00:03:29,780
+keyword distinct.
+
+42
+00:03:29,780 --> 00:03:35,690
+This is a special feature of the Count function that returns the number of all rows of the table null
+
+43
+00:03:35,690 --> 00:03:37,320
+values included.
+
+44
+00:03:39,210 --> 00:03:44,940
+So by writing a specific column name or a star symbol within the parentheses you will define whether
+
+45
+00:03:44,940 --> 00:03:47,370
+null values are taken into account.
+
+46
+00:03:49,230 --> 00:03:55,170
+A final note is that the parentheses in the argument must be attached to the name of the aggregate function.
+
+47
+00:03:55,170 --> 00:04:01,780
+In other words you shouldn't leave whitespace before opening the parentheses.
+
+48
+00:04:01,870 --> 00:04:09,950
+If you do your query won't work good in the next video.
+
+49
+00:04:09,970 --> 00:04:12,120
+We will learn how to use some.
+
+50
+00:04:12,250 --> 00:04:13,140
+See you there.

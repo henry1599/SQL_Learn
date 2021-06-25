@@ -1,0 +1,79 @@
+1
+00:00:00,940 --> 00:00:08,820
+In this lesson we'll show you an unsafe delete operation if we do not set a condition in the WHERE clause
+
+2
+00:00:08,820 --> 00:00:10,270
+of a delete statement.
+
+3
+00:00:10,350 --> 00:00:12,560
+We are taking a big risk.
+
+4
+00:00:12,930 --> 00:00:17,180
+This could potentially lead to the removal of all the tables records.
+
+5
+00:00:17,190 --> 00:00:24,570
+That's why we must be very careful when using this statement always let's recall what we have in the
+
+6
+00:00:24,570 --> 00:00:32,970
+department's duplicate table the numbers and names of nine departments in the company.
+
+7
+00:00:33,200 --> 00:00:37,100
+Let's execute a delete statement without a WHERE clause attached to it.
+
+8
+00:00:38,910 --> 00:00:42,700
+You see nine rows were affected.
+
+9
+00:00:42,700 --> 00:00:47,320
+Now we can check the table once more.
+
+10
+00:00:47,360 --> 00:00:53,740
+It couldn't be emptier than that to undo the changes we should be able to execute a rollback statement.
+
+11
+00:00:54,020 --> 00:00:55,280
+OK.
+
+12
+00:00:55,290 --> 00:00:59,550
+And did it work.
+
+13
+00:00:59,600 --> 00:01:05,540
+We'll have to select all the information from this tiny table to verify whether we have our data back.
+
+14
+00:01:07,210 --> 00:01:10,260
+Here it is waiting to be retrieved.
+
+15
+00:01:10,270 --> 00:01:13,920
+Therefore in conclusion we can say the following.
+
+16
+00:01:13,930 --> 00:01:16,450
+Be careful with the delete statement.
+
+17
+00:01:16,450 --> 00:01:22,180
+Don't forget to attach a condition in the WHERE clause unless you want to lose all your information
+
+18
+00:01:22,770 --> 00:01:23,790
+in the next video.
+
+19
+00:01:23,800 --> 00:01:28,050
+We will compare drop delete and truncate.
+
+20
+00:01:28,060 --> 00:01:29,140
+See you there.

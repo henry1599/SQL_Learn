@@ -1,0 +1,67 @@
+1
+00:00:00,620 --> 00:00:01,100
+Or you.
+
+2
+00:00:01,160 --> 00:00:02,000
+OK.
+
+3
+00:00:02,060 --> 00:00:08,500
+So max and min return the maximum and minimum value of the column.
+
+4
+00:00:08,600 --> 00:00:14,990
+If you're asking yourself wait which is the highest salary we offer you will need the maximum value
+
+5
+00:00:14,990 --> 00:00:21,690
+from the salary column would you placing it right after the select keyword.
+
+6
+00:00:21,690 --> 00:00:28,920
+The max function can retrieve this value for you then conclude by from salaries in a semi-colon.
+
+7
+00:00:29,700 --> 00:00:31,640
+Let's run the query to see the result.
+
+8
+00:00:33,630 --> 00:00:39,870
+Well the highest salary paid by the company is one hundred fifty eight thousand two hundred twenty dollars
+
+9
+00:00:39,870 --> 00:00:41,060
+per annum.
+
+10
+00:00:41,190 --> 00:00:42,030
+Not bad.
+
+11
+00:00:43,080 --> 00:00:50,430
+And which is the lowest contract value in the company hopefully of an intern or a young newcomer to
+
+12
+00:00:50,430 --> 00:00:51,330
+get the answer.
+
+13
+00:00:51,330 --> 00:00:58,170
+Substitute the max function with men without doing anything with the rest of the code in the query execute
+
+14
+00:00:59,870 --> 00:01:03,160
+thirty eight thousand seven hundred and thirty five dollars.
+
+15
+00:01:03,260 --> 00:01:07,650
+As you can see Min returns the lowest from the list of numeric values.
+
+16
+00:01:07,730 --> 00:01:13,160
+Great in our next video we'll learn about the average function.
+
+17
+00:01:13,410 --> 00:01:14,480
+Thank you for watching.

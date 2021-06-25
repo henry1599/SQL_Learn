@@ -1,0 +1,83 @@
+1
+00:00:00,630 --> 00:00:01,160
+End.
+
+2
+00:00:01,220 --> 00:00:02,040
+Right.
+
+3
+00:00:02,080 --> 00:00:08,710
+So now that you know what aggregate functions are about and how to use the first of them count we are
+
+4
+00:00:08,710 --> 00:00:11,020
+ready to introduce the next one.
+
+5
+00:00:11,580 --> 00:00:17,600
+Let's all the values in the salaries column to see how much money the firm spent on salaries.
+
+6
+00:00:18,660 --> 00:00:24,580
+All we have to do is use some instead of count and designate the salary column as an argument.
+
+7
+00:00:26,590 --> 00:00:29,100
+Let's run this query.
+
+8
+00:00:29,280 --> 00:00:32,320
+Boom a huge number.
+
+9
+00:00:32,340 --> 00:00:34,440
+Don't spend too much time reading the result.
+
+10
+00:00:34,440 --> 00:00:38,400
+Trust me it's larger than 61 billion.
+
+11
+00:00:38,760 --> 00:00:39,460
+Wow.
+
+12
+00:00:40,790 --> 00:00:47,060
+For the sake of this exercise let's replace the field name indicated in parentheses with this star symbol.
+
+13
+00:00:47,060 --> 00:00:51,080
+Do you think workbench will sum all numbers from the salaries table.
+
+14
+00:00:51,080 --> 00:00:57,300
+No it would rather raise a syntax error.
+
+15
+00:00:57,500 --> 00:00:58,100
+That's proof.
+
+16
+00:00:58,100 --> 00:01:02,710
+The star symbol feature goes well with only the count function.
+
+17
+00:01:02,830 --> 00:01:05,360
+It doesn't work with other aggregate functions.
+
+18
+00:01:07,670 --> 00:01:14,190
+Overall remember that count can be applied to both numeric and non-numeric data differently some.
+
+19
+00:01:14,240 --> 00:01:20,650
+And the remaining aggregate functions average men and Max work only with numeric data.
+
+20
+00:01:20,810 --> 00:01:28,830
+You can't use them with non-numeric data in the next lecture will show you how to use max and man.
+
+21
+00:01:28,850 --> 00:01:29,930
+Thank you for watching.

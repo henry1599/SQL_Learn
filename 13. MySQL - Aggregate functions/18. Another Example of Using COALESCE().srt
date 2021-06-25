@@ -1,0 +1,75 @@
+1
+00:00:00,830 --> 00:00:04,790
+There is another interesting way in which we can use coalesce.
+
+2
+00:00:05,000 --> 00:00:07,930
+We can have a single argument in a given function.
+
+3
+00:00:08,180 --> 00:00:10,070
+How should it be interpreted.
+
+4
+00:00:10,100 --> 00:00:16,340
+Quite simply the value indicated as an argument will be displayed technically.
+
+5
+00:00:16,740 --> 00:00:23,600
+And this example coalesced was used to show one additional column and the output practitioners find
+
+6
+00:00:23,600 --> 00:00:29,450
+this trick useful of some hypothetical result must be provided in a supplementary column.
+
+7
+00:00:29,540 --> 00:00:36,270
+In our situation we saw how the apartment manager name appears in all records of the fake column.
+
+8
+00:00:36,440 --> 00:00:42,410
+This way if you are still building the table and perhaps the database coalesce can help you visualize
+
+9
+00:00:42,410 --> 00:00:48,380
+a prototype of the tables final version and thus consider whether to create a real column containing
+
+10
+00:00:48,380 --> 00:00:50,190
+the department manager's name.
+
+11
+00:00:52,020 --> 00:00:58,770
+Finally please remember that this trick is carried out with coalesce only if you substitute it with
+
+12
+00:00:58,800 --> 00:00:59,420
+if no.
+
+13
+00:00:59,430 --> 00:01:09,330
+For example workbench will display an error because if Noal works with precisely two arguments while
+
+14
+00:01:09,330 --> 00:01:13,280
+coalesce can have one two or more arguments.
+
+15
+00:01:13,560 --> 00:01:22,190
+For this reason on most occasions professionals prefer using coalesce instead of if null with this we
+
+16
+00:01:22,190 --> 00:01:25,310
+conclude our aggregate forget functions S..
+
+17
+00:01:25,370 --> 00:01:32,240
+In our next section we will study Joines one of the most powerful and handy tools in my rescue well
+
+18
+00:01:32,420 --> 00:01:34,530
+and Eskew Well in general.
+
+19
+00:01:34,910 --> 00:01:35,980
+Thank you for watching.
