@@ -1,0 +1,275 @@
+1
+00:00:00,610 --> 00:00:07,480
+Excellent Let's apply JOIN syntax to the department manager duplicate and apartments duplicate tables
+
+2
+00:00:07,630 --> 00:00:14,320
+to obtain a list of records containing information about the department number the employee number and
+
+3
+00:00:14,320 --> 00:00:17,860
+the department name related to every manager.
+
+4
+00:00:17,910 --> 00:00:22,900
+I will use the letters M and D as aliases for the two tables respectively.
+
+5
+00:00:24,890 --> 00:00:31,220
+Knowing their content we can specify the fields we would like to see right after the select keyword.
+
+6
+00:00:31,220 --> 00:00:36,920
+Let's extract the department in employee numbers from the department manager duplicate table and the
+
+7
+00:00:36,920 --> 00:00:41,720
+department name from the department's duplicate table.
+
+8
+00:00:41,720 --> 00:00:42,870
+All right.
+
+9
+00:00:42,870 --> 00:00:48,650
+Therefore the next thing we must state are the two tables to be joined while doing that.
+
+10
+00:00:48,680 --> 00:00:55,280
+Please don't forget to add their aliases so we must type department manager.
+
+11
+00:00:55,320 --> 00:00:56,520
+Duplicate M.
+
+12
+00:00:59,470 --> 00:01:00,700
+careful here.
+
+13
+00:01:00,730 --> 00:01:04,490
+Enter join as this is the type of join we are implementing.
+
+14
+00:01:04,570 --> 00:01:07,510
+And finally deps duplicate de
+
+15
+00:01:10,920 --> 00:01:11,620
+awesome.
+
+16
+00:01:11,970 --> 00:01:17,040
+To conclude the JOIN syntax we must specify the columns relating the two tables.
+
+17
+00:01:17,040 --> 00:01:23,790
+Remember let's do that by typing on and then equalising or conceptually matching the department number
+
+18
+00:01:23,790 --> 00:01:28,610
+column from the first table with that column bearing the same name from the second table.
+
+19
+00:01:30,800 --> 00:01:35,540
+These are the department number field from the department manager duplicate table and the department
+
+20
+00:01:35,540 --> 00:01:40,260
+number field from the department's duplicate table.
+
+21
+00:01:40,270 --> 00:01:45,400
+I would like to remind you that the relating columns of the two tables need not be named in the same
+
+22
+00:01:45,400 --> 00:01:46,240
+way.
+
+23
+00:01:46,300 --> 00:01:50,980
+However it helps avoid confusion and is more convenient if they do.
+
+24
+00:01:51,010 --> 00:01:59,320
+That's why in our example both fields carry the same name before running this interesting query.
+
+25
+00:01:59,420 --> 00:02:02,260
+Order the results according to the department number.
+
+26
+00:02:02,270 --> 00:02:04,940
+This will improve the outputs representation.
+
+27
+00:02:04,940 --> 00:02:08,780
+Since we obtained this column from the department manager duplicate table.
+
+28
+00:02:08,780 --> 00:02:14,170
+We will sort the information in the order by clause by the department number from the YM table.
+
+29
+00:02:15,970 --> 00:02:24,860
+All right let's execute this query and see what will obtain 20 rows of information.
+
+30
+00:02:24,860 --> 00:02:27,030
+Let's check the retrieve data.
+
+31
+00:02:27,200 --> 00:02:30,710
+We have data about the departments from 3 to 9 only.
+
+32
+00:02:30,860 --> 00:02:40,260
+There is no data about departments one to 10 or 11 or about the ones labeled as null values.
+
+33
+00:02:40,950 --> 00:02:42,390
+Why is this happening.
+
+34
+00:02:43,530 --> 00:02:44,280
+Inner joins.
+
+35
+00:02:44,290 --> 00:02:51,250
+Extract only records in which the values in the related columns match no values or values appearing
+
+36
+00:02:51,250 --> 00:02:58,110
+and just one of the two tables and not appearing in the other are not displayed.
+
+37
+00:02:58,140 --> 00:03:03,520
+Let's analyze the outcome by examining the tables row by row.
+
+38
+00:03:03,610 --> 00:03:09,670
+The department manager duplicate has a few no value department numbers and has no information about
+
+39
+00:03:09,670 --> 00:03:18,540
+Department 1 10 and 11 therefore inner joins do not present no values.
+
+40
+00:03:18,720 --> 00:03:21,930
+The first four rows do not appear in the inner join.
+
+41
+00:03:21,990 --> 00:03:22,940
+We executed
+
+42
+00:03:25,920 --> 00:03:26,690
+OK.
+
+43
+00:03:28,260 --> 00:03:36,190
+We have 26 records in this table all together and 26 minus four gives us 22.
+
+44
+00:03:36,380 --> 00:03:43,450
+Hence there must be two records in the inner join we do not see because it displayed only 20 rows.
+
+45
+00:03:43,460 --> 00:03:48,520
+Now we can recheck the content of the department's duplicate table.
+
+46
+00:03:48,540 --> 00:03:50,230
+It has a null value department.
+
+47
+00:03:50,250 --> 00:03:55,790
+Number two do we see it in the inner join output.
+
+48
+00:03:55,800 --> 00:03:57,400
+No we don't.
+
+49
+00:03:57,400 --> 00:04:02,940
+And why didn't SU well match the null values of the first table with this null value here.
+
+50
+00:04:03,840 --> 00:04:09,960
+Because it would make no sense only non-North matching values are in play.
+
+51
+00:04:11,290 --> 00:04:16,000
+Moving further department number two doesn't participate in any record.
+
+52
+00:04:16,180 --> 00:04:19,460
+Do we have it in the department manager duplicate table.
+
+53
+00:04:19,780 --> 00:04:21,560
+Yes we do.
+
+54
+00:04:21,580 --> 00:04:24,100
+There are two records with it in there.
+
+55
+00:04:24,100 --> 00:04:29,740
+And namely these were the two records we did not see in the final output.
+
+56
+00:04:29,740 --> 00:04:34,510
+There were no values from the department's duplicate table to be matched with them in the inner join
+
+57
+00:04:35,670 --> 00:04:39,060
+awesome.
+
+58
+00:04:39,090 --> 00:04:43,030
+Finally the department's duplicate table has two more records.
+
+59
+00:04:43,030 --> 00:04:45,650
+They are of departments 10 and 11.
+
+60
+00:04:45,720 --> 00:04:53,040
+But as we mentioned they have no values to be matched with from the department manager duplicate table.
+
+61
+00:04:53,100 --> 00:04:55,670
+These two rows are dropped from the outcome.
+
+62
+00:04:57,190 --> 00:04:59,130
+Great.
+
+63
+00:04:59,250 --> 00:05:04,770
+I hope this analysis makes it clearer and explains why we say an inner join is represented by the common
+
+64
+00:05:04,830 --> 00:05:08,220
+area of the two circles in the Venn diagram.
+
+65
+00:05:08,250 --> 00:05:14,820
+This area is namely the set of the matching values of both tables which are the only ones displayed
+
+66
+00:05:14,820 --> 00:05:18,880
+in the inner join output.
+
+67
+00:05:18,970 --> 00:05:27,510
+And what if such matching values did not exist simply the result set will be empty.
+
+68
+00:05:28,770 --> 00:05:31,650
+There will be no link between the two tables.
+
+69
+00:05:32,070 --> 00:05:32,970
+Thanks for watching.
